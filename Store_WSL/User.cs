@@ -1,44 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.Serialization;
 
 namespace Store_WSL
 {
   [DataContract]
   public class User
   {
-    private int _id;
-    private int _positionId;
-    private string _nick;
-    private string _password;
+    [DataMember]
+    public int Id { get; set; }
 
     [DataMember]
-    public int Id
-    {
-      get { return _id; }
-    }
+    public int PositionId { get; set; }
 
     [DataMember]
-    public int PositionId
-    {
-      get { return _positionId; }
-    }
+    public string Nick { get; set; }
 
     [DataMember]
-    public string Nick
-    {
-      get { return _nick; }
-    }
-
-    [DataMember]
-    public string Password
-    {
-      get { return _password; }
-    }
+    public string Password { get; set; }
 
     public void SetValues(
       int id,
@@ -47,23 +24,23 @@ namespace Store_WSL
       string password
       )
     {
-      _id = id;
-      _positionId = posId;
-      _nick = nick;
-      _password = password;
+      Id = id;
+      PositionId = posId;
+      Nick = nick;
+      Password = password;
     }
 
     public void Clear()
     {
-      _id = 0;
-      _positionId = 0;
-      _nick = "";
-      _password = "";
+      Id = 0;
+      PositionId = 0;
+      Nick = "";
+      Password = "";
     }
 
     public void SetId(int id)
     {
-      _id = id;
+      Id = id;
     }
   }
 }

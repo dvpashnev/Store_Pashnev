@@ -33,66 +33,66 @@ namespace Store_Pashnev.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoreService/GetCurIdentity", ReplyAction="http://tempuri.org/IStoreService/GetCurIdentityResponse")]
         System.Threading.Tasks.Task<int> GetCurIdentityAsync(string tableName);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoreService/SetPosition", ReplyAction="http://tempuri.org/IStoreService/SetPositionResponse")]
-        Store_WSL.DataBase SetPosition(Store_WSL.Position position);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStoreService/SetPosition")]
+        void SetPosition(Store_WSL.Position position);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoreService/SetPosition", ReplyAction="http://tempuri.org/IStoreService/SetPositionResponse")]
-        System.Threading.Tasks.Task<Store_WSL.DataBase> SetPositionAsync(Store_WSL.Position position);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStoreService/SetPosition")]
+        System.Threading.Tasks.Task SetPositionAsync(Store_WSL.Position position);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoreService/SetProduct", ReplyAction="http://tempuri.org/IStoreService/SetProductResponse")]
-        Store_WSL.DataBase SetProduct(Store_WSL.Product product);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStoreService/SetProduct")]
+        void SetProduct(Store_WSL.Product product);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoreService/SetProduct", ReplyAction="http://tempuri.org/IStoreService/SetProductResponse")]
-        System.Threading.Tasks.Task<Store_WSL.DataBase> SetProductAsync(Store_WSL.Product product);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStoreService/SetProduct")]
+        System.Threading.Tasks.Task SetProductAsync(Store_WSL.Product product);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoreService/DelProduct", ReplyAction="http://tempuri.org/IStoreService/DelProductResponse")]
-        Store_WSL.DataBase DelProduct(Store_WSL.Product product);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStoreService/DelProduct")]
+        void DelProduct(Store_WSL.Product product);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoreService/DelProduct", ReplyAction="http://tempuri.org/IStoreService/DelProductResponse")]
-        System.Threading.Tasks.Task<Store_WSL.DataBase> DelProductAsync(Store_WSL.Product product);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStoreService/DelProduct")]
+        System.Threading.Tasks.Task DelProductAsync(Store_WSL.Product product);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoreService/SetDepartment", ReplyAction="http://tempuri.org/IStoreService/SetDepartmentResponse")]
-        Store_WSL.DataBase SetDepartment(Store_WSL.Department department);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStoreService/SetDepartment")]
+        void SetDepartment(Store_WSL.Department department);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoreService/SetDepartment", ReplyAction="http://tempuri.org/IStoreService/SetDepartmentResponse")]
-        System.Threading.Tasks.Task<Store_WSL.DataBase> SetDepartmentAsync(Store_WSL.Department department);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStoreService/SetDepartment")]
+        System.Threading.Tasks.Task SetDepartmentAsync(Store_WSL.Department department);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoreService/SetEmployee", ReplyAction="http://tempuri.org/IStoreService/SetEmployeeResponse")]
-        Store_WSL.DataBase SetEmployee(Store_WSL.Employee employee);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStoreService/SetEmployee")]
+        void SetEmployee(Store_WSL.Employee employee);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoreService/SetEmployee", ReplyAction="http://tempuri.org/IStoreService/SetEmployeeResponse")]
-        System.Threading.Tasks.Task<Store_WSL.DataBase> SetEmployeeAsync(Store_WSL.Employee employee);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStoreService/SetEmployee")]
+        System.Threading.Tasks.Task SetEmployeeAsync(Store_WSL.Employee employee);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoreService/SetUser", ReplyAction="http://tempuri.org/IStoreService/SetUserResponse")]
-        Store_WSL.DataBase SetUser(Store_WSL.User user);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStoreService/SetUser")]
+        void SetUser(Store_WSL.User user);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoreService/SetUser", ReplyAction="http://tempuri.org/IStoreService/SetUserResponse")]
-        System.Threading.Tasks.Task<Store_WSL.DataBase> SetUserAsync(Store_WSL.User user);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStoreService/SetUser")]
+        System.Threading.Tasks.Task SetUserAsync(Store_WSL.User user);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoreService/SetClient", ReplyAction="http://tempuri.org/IStoreService/SetClientResponse")]
-        Store_WSL.DataBase SetClient(Store_WSL.Client client);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStoreService/SetClient")]
+        void SetClient(Store_WSL.Client client);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoreService/SetClient", ReplyAction="http://tempuri.org/IStoreService/SetClientResponse")]
-        System.Threading.Tasks.Task<Store_WSL.DataBase> SetClientAsync(Store_WSL.Client client);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStoreService/SetClient")]
+        System.Threading.Tasks.Task SetClientAsync(Store_WSL.Client client);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoreService/SetOrder", ReplyAction="http://tempuri.org/IStoreService/SetOrderResponse")]
-        Store_WSL.DataBase SetOrder(Store_WSL.Order order);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStoreService/SetOrder")]
+        void SetOrder(Store_WSL.Order order);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoreService/SetOrder", ReplyAction="http://tempuri.org/IStoreService/SetOrderResponse")]
-        System.Threading.Tasks.Task<Store_WSL.DataBase> SetOrderAsync(Store_WSL.Order order);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStoreService/SetOrder")]
+        System.Threading.Tasks.Task SetOrderAsync(Store_WSL.Order order);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoreService/RemoveOrder", ReplyAction="http://tempuri.org/IStoreService/RemoveOrderResponse")]
-        Store_WSL.DataBase RemoveOrder(Store_WSL.Order order);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStoreService/RemoveOrder")]
+        void RemoveOrder(Store_WSL.Order order);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStoreService/RemoveOrder", ReplyAction="http://tempuri.org/IStoreService/RemoveOrderResponse")]
-        System.Threading.Tasks.Task<Store_WSL.DataBase> RemoveOrderAsync(Store_WSL.Order order);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStoreService/RemoveOrder")]
+        System.Threading.Tasks.Task RemoveOrderAsync(Store_WSL.Order order);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface IStoreServiceCallback {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IStoreService/DbRenew")]
-        void DbRenew();
+        void DbRenew(Store_WSL.DataBase db);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -147,75 +147,75 @@ namespace Store_Pashnev.ServiceReference1 {
             return base.Channel.GetCurIdentityAsync(tableName);
         }
         
-        public Store_WSL.DataBase SetPosition(Store_WSL.Position position) {
-            return base.Channel.SetPosition(position);
+        public void SetPosition(Store_WSL.Position position) {
+            base.Channel.SetPosition(position);
         }
         
-        public System.Threading.Tasks.Task<Store_WSL.DataBase> SetPositionAsync(Store_WSL.Position position) {
+        public System.Threading.Tasks.Task SetPositionAsync(Store_WSL.Position position) {
             return base.Channel.SetPositionAsync(position);
         }
         
-        public Store_WSL.DataBase SetProduct(Store_WSL.Product product) {
-            return base.Channel.SetProduct(product);
+        public void SetProduct(Store_WSL.Product product) {
+            base.Channel.SetProduct(product);
         }
         
-        public System.Threading.Tasks.Task<Store_WSL.DataBase> SetProductAsync(Store_WSL.Product product) {
+        public System.Threading.Tasks.Task SetProductAsync(Store_WSL.Product product) {
             return base.Channel.SetProductAsync(product);
         }
         
-        public Store_WSL.DataBase DelProduct(Store_WSL.Product product) {
-            return base.Channel.DelProduct(product);
+        public void DelProduct(Store_WSL.Product product) {
+            base.Channel.DelProduct(product);
         }
         
-        public System.Threading.Tasks.Task<Store_WSL.DataBase> DelProductAsync(Store_WSL.Product product) {
+        public System.Threading.Tasks.Task DelProductAsync(Store_WSL.Product product) {
             return base.Channel.DelProductAsync(product);
         }
         
-        public Store_WSL.DataBase SetDepartment(Store_WSL.Department department) {
-            return base.Channel.SetDepartment(department);
+        public void SetDepartment(Store_WSL.Department department) {
+            base.Channel.SetDepartment(department);
         }
         
-        public System.Threading.Tasks.Task<Store_WSL.DataBase> SetDepartmentAsync(Store_WSL.Department department) {
+        public System.Threading.Tasks.Task SetDepartmentAsync(Store_WSL.Department department) {
             return base.Channel.SetDepartmentAsync(department);
         }
         
-        public Store_WSL.DataBase SetEmployee(Store_WSL.Employee employee) {
-            return base.Channel.SetEmployee(employee);
+        public void SetEmployee(Store_WSL.Employee employee) {
+            base.Channel.SetEmployee(employee);
         }
         
-        public System.Threading.Tasks.Task<Store_WSL.DataBase> SetEmployeeAsync(Store_WSL.Employee employee) {
+        public System.Threading.Tasks.Task SetEmployeeAsync(Store_WSL.Employee employee) {
             return base.Channel.SetEmployeeAsync(employee);
         }
         
-        public Store_WSL.DataBase SetUser(Store_WSL.User user) {
-            return base.Channel.SetUser(user);
+        public void SetUser(Store_WSL.User user) {
+            base.Channel.SetUser(user);
         }
         
-        public System.Threading.Tasks.Task<Store_WSL.DataBase> SetUserAsync(Store_WSL.User user) {
+        public System.Threading.Tasks.Task SetUserAsync(Store_WSL.User user) {
             return base.Channel.SetUserAsync(user);
         }
         
-        public Store_WSL.DataBase SetClient(Store_WSL.Client client) {
-            return base.Channel.SetClient(client);
+        public void SetClient(Store_WSL.Client client) {
+            base.Channel.SetClient(client);
         }
         
-        public System.Threading.Tasks.Task<Store_WSL.DataBase> SetClientAsync(Store_WSL.Client client) {
+        public System.Threading.Tasks.Task SetClientAsync(Store_WSL.Client client) {
             return base.Channel.SetClientAsync(client);
         }
         
-        public Store_WSL.DataBase SetOrder(Store_WSL.Order order) {
-            return base.Channel.SetOrder(order);
+        public void SetOrder(Store_WSL.Order order) {
+            base.Channel.SetOrder(order);
         }
         
-        public System.Threading.Tasks.Task<Store_WSL.DataBase> SetOrderAsync(Store_WSL.Order order) {
+        public System.Threading.Tasks.Task SetOrderAsync(Store_WSL.Order order) {
             return base.Channel.SetOrderAsync(order);
         }
         
-        public Store_WSL.DataBase RemoveOrder(Store_WSL.Order order) {
-            return base.Channel.RemoveOrder(order);
+        public void RemoveOrder(Store_WSL.Order order) {
+            base.Channel.RemoveOrder(order);
         }
         
-        public System.Threading.Tasks.Task<Store_WSL.DataBase> RemoveOrderAsync(Store_WSL.Order order) {
+        public System.Threading.Tasks.Task RemoveOrderAsync(Store_WSL.Order order) {
             return base.Channel.RemoveOrderAsync(order);
         }
     }

@@ -22,3 +22,9 @@ C:\Users\408\Documents\Visual Studio 2013\Projects\WCF\Store_Pashnev2\Store_WSL\
 C:\Users\408\Documents\Visual Studio 2013\Projects\WCF\Store_Pashnev2\Store_WSL\obj\Debug\Store_WSL.dll
 C:\Users\408\Documents\Visual Studio 2013\Projects\WCF\Store_Pashnev2\Store_WSL\obj\Debug\Store_WSL.pdb
 C:\Users\Павел\Documents\Visual Studio 2013\Projects\WCF\Store_Pashnev2\Store_WSL\bin\Debug\Store_WSL.dll.config
+C:\Users\Павел\Documents\Visual Studio 2013\Projects\WCF\Store_Pashnev3\Store_WSL\bin\Debug\Store_WSL.dll.config
+C:\Users\Павел\Documents\Visual Studio 2013\Projects\WCF\Store_Pashnev3\Store_WSL\bin\Debug\Store_WSL.dll
+C:\Users\Павел\Documents\Visual Studio 2013\Projects\WCF\Store_Pashnev3\Store_WSL\bin\Debug\Store_WSL.pdb
+C:\Users\Павел\Documents\Visual Studio 2013\Projects\WCF\Store_Pashnev3\Store_WSL\obj\Debug\Store_WSL.csprojResolveAssemblyReference.cache
+C:\Users\Павел\Documents\Visual Studio 2013\Projects\WCF\Store_Pashnev3\Store_WSL\obj\Debug\Store_WSL.dll
+C:\Users\Павел\Documents\Visual Studio 2013\Projects\WCF\Store_Pashnev3\Store_WSL\obj\Debug\Store_WSL.pdb

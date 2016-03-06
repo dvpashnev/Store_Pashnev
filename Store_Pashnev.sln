@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store_Pashnev", "Store_Pash
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store_WSL", "Store_WSL\Store_WSL.csproj", "{2472A490-1AEC-4CDA-987A-2EC2F41CC63B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "Host\Host.csproj", "{486FAE7F-4E30-41ED-9FFB-D5E52506C5A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2472A490-1AEC-4CDA-987A-2EC2F41CC63B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2472A490-1AEC-4CDA-987A-2EC2F41CC63B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2472A490-1AEC-4CDA-987A-2EC2F41CC63B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{486FAE7F-4E30-41ED-9FFB-D5E52506C5A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{486FAE7F-4E30-41ED-9FFB-D5E52506C5A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{486FAE7F-4E30-41ED-9FFB-D5E52506C5A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{486FAE7F-4E30-41ED-9FFB-D5E52506C5A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

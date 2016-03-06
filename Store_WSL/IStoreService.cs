@@ -19,32 +19,32 @@ namespace Store_WSL
     [OperationContract]
     int GetCurIdentity(string tableName);
 
-    [OperationContract]
-    DataBase SetPosition(Position position);
+    [OperationContract(IsOneWay = true)]
+    void SetPosition(Position position);
 
-    [OperationContract]
-    DataBase SetProduct(Product product);
+    [OperationContract(IsOneWay = true)]
+    void SetProduct(Product product);
 
-    [OperationContract]
-    DataBase DelProduct(Product product);
+    [OperationContract(IsOneWay = true)]
+    void DelProduct(Product product);
 
-    [OperationContract]
-    DataBase SetDepartment(Department department);
+    [OperationContract(IsOneWay = true)]
+    void SetDepartment(Department department);
 
-    [OperationContract]
-    DataBase SetEmployee(Employee employee);
+    [OperationContract(IsOneWay = true)]
+    void SetEmployee(Employee employee);
 
-    [OperationContract]
-    DataBase SetUser(User user);
-    
-    [OperationContract]
-    DataBase SetClient(Client client);
+    [OperationContract(IsOneWay = true)]
+    void SetUser(User user);
 
-    [OperationContract]
-    DataBase SetOrder(Order order);
+    [OperationContract(IsOneWay = true)]
+    void SetClient(Client client);
 
-    [OperationContract]
-    DataBase RemoveOrder(Order order);
+    [OperationContract(IsOneWay = true)]
+    void SetOrder(Order order);
+
+    [OperationContract(IsOneWay = true)]
+    void RemoveOrder(Order order);
   }
 
 }

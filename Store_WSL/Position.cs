@@ -10,139 +10,63 @@ namespace Store_WSL
   [DataContract]
   public class Position
   {
-    private int _id;
-    private string _title;
-    private bool _products;
-    private bool _order;
-    private bool _clients;
-    private bool _reports;
-    private bool _management;
-    private bool _client_LN;
-    private bool _client_FN;
-    private bool _client_MN;
-    private bool _client_Sex;
-    private bool _client_BD;
-    private bool _client_Phone1;
-    private bool _client_Phone2;
-    private bool _client_Phone3;
-    private bool _client_Adress;
-    private bool _client_SO;
-    private bool _client_Discount;
-    private bool _client_FirmName;
+    [DataMember]
+    public int Id { get; set; }
 
     [DataMember]
-    public int Id
-    {
-      get { return _id; }
-    }
+    public string Title { get; set; }
 
     [DataMember]
-    public string Title
-    {
-      get { return _title; }
-    }
+    public bool Products { get; set; }
 
     [DataMember]
-    public bool Products
-    {
-      get { return _products; }
-    }
+    public bool Order { get; set; }
 
     [DataMember]
-    public bool Order
-    {
-      get { return _order; }
-    }
+    public bool Clients { get; set; }
 
     [DataMember]
-    public bool Clients
-    {
-      get { return _clients; }
-    }
+    public bool Reports { get; set; }
 
     [DataMember]
-    public bool Reports
-    {
-      get { return _reports; }
-    }
+    public bool Management { get; set; }
 
     [DataMember]
-    public bool Management
-    {
-      get { return _management; }
-    }
+    public bool Client_LN { get; set; }
 
     [DataMember]
-    public bool Client_LN
-    {
-      get { return _client_LN; }
-    }
+    public bool Client_FN { get; set; }
 
     [DataMember]
-    public bool Client_FN
-    {
-      get { return _client_FN; }
-    }
+    public bool Client_MN { get; set; }
 
     [DataMember]
-    public bool Client_MN
-    {
-      get { return _client_MN; }
-    }
+    public bool Client_Sex { get; set; }
 
     [DataMember]
-    public bool Client_Sex
-    {
-      get { return _client_Sex; }
-    }
+    public bool Client_BD { get; set; }
 
     [DataMember]
-    public bool Client_BD
-    {
-      get { return _client_BD; }
-    }
+    public bool Client_Phone1 { get; set; }
 
     [DataMember]
-    public bool Client_Phone1
-    {
-      get { return _client_Phone1; }
-    }
+    public bool Client_Phone2 { get; set; }
 
     [DataMember]
-    public bool Client_Phone2
-    {
-      get { return _client_Phone2; }
-    }
+    public bool Client_Phone3 { get; set; }
 
     [DataMember]
-    public bool Client_Phone3
-    {
-      get { return _client_Phone3; }
-    }
+    public bool Client_Adress { get; set; }
 
     [DataMember]
-    public bool Client_Adress
-    {
-      get { return _client_Adress; }
-    }
+    public bool Client_SO { get; set; }
 
     [DataMember]
-    public bool Client_SO
-    {
-      get { return _client_SO; }
-    }
+    public bool Client_Discount { get; set; }
 
     [DataMember]
-    public bool Client_Discount
-    {
-      get { return _client_Discount; }
-    }
+    public bool Client_FirmName { get; set; }
 
-    [DataMember]
-    public bool Client_FirmName
-    {
-      get { return _client_FirmName; }
-    }
     public void SetValues(
           int id,
           string title,
@@ -165,52 +89,52 @@ namespace Store_WSL
           bool clientFirmName
     )
     {
-      _id = id;
-      _title = title;
-      _products = products;
-      _order = order;
-      _clients = clients;
-      _reports = reports;
-      _management = management;
-      _client_LN = clientLn;
-      _client_FN = clientFn;
-      _client_MN = clientMn;
-      _client_Sex = clientSex;
-      _client_BD = clientBd;
-      _client_Phone1 = clientPhone1;
-      _client_Phone2 = clientPhone2;
-      _client_Phone3 = clientPhone3;
-      _client_Adress = clientAdress;
-      _client_SO = clientSo;
-      _client_Discount = clientDiscount;
-      _client_FirmName = clientFirmName;
+      Id = id;
+      Title = title;
+      Products = products;
+      Order = order;
+      Clients = clients;
+      Reports = reports;
+      Management = management;
+      Client_LN = clientLn;
+      Client_FN = clientFn;
+      Client_MN = clientMn;
+      Client_Sex = clientSex;
+      Client_BD = clientBd;
+      Client_Phone1 = clientPhone1;
+      Client_Phone2 = clientPhone2;
+      Client_Phone3 = clientPhone3;
+      Client_Adress = clientAdress;
+      Client_SO = clientSo;
+      Client_Discount = clientDiscount;
+      Client_FirmName = clientFirmName;
     }
 
     public void Clear()
     {
-      _id = 0;
-      _title = "";
-      _products = false;
-      _order = false;
-      _clients = false;
-      _reports = false;
-      _management = false;
-      _client_LN = false;
-      _client_FN = false;
-      _client_MN = false;
-      _client_Sex = false;
-      _client_BD = false;
-      _client_Phone1 = false;
-      _client_Phone2 = false;
-      _client_Phone3 = false;
-      _client_Adress = false;
-      _client_SO = false;
-      _client_Discount = false;
+      Id = 0;
+      Title = "";
+      Products = false;
+      Order = false;
+      Clients = false;
+      Reports = false;
+      Management = false;
+      Client_LN = false;
+      Client_FN = false;
+      Client_MN = false;
+      Client_Sex = false;
+      Client_BD = false;
+      Client_Phone1 = false;
+      Client_Phone2 = false;
+      Client_Phone3 = false;
+      Client_Adress = false;
+      Client_SO = false;
+      Client_Discount = false;
     }
 
     public void SetId(int id)
     {
-      _id = id;
+      Id = id;
     }
   }
 }

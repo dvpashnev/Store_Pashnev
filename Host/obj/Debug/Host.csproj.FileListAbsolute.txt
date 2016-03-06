@@ -1,0 +1,8 @@
+C:\Users\Павел\Documents\Visual Studio 2013\Projects\WCF\Store_Pashnev3\Host\bin\Debug\Host.exe.config
+C:\Users\Павел\Documents\Visual Studio 2013\Projects\WCF\Store_Pashnev3\Host\bin\Debug\Host.exe
+C:\Users\Павел\Documents\Visual Studio 2013\Projects\WCF\Store_Pashnev3\Host\bin\Debug\Host.pdb
+C:\Users\Павел\Documents\Visual Studio 2013\Projects\WCF\Store_Pashnev3\Host\bin\Debug\Store_WSL.dll
+C:\Users\Павел\Documents\Visual Studio 2013\Projects\WCF\Store_Pashnev3\Host\bin\Debug\Store_WSL.pdb
+C:\Users\Павел\Documents\Visual Studio 2013\Projects\WCF\Store_Pashnev3\Host\obj\Debug\Host.csprojResolveAssemblyReference.cache
+C:\Users\Павел\Documents\Visual Studio 2013\Projects\WCF\Store_Pashnev3\Host\obj\Debug\Host.exe
+C:\Users\Павел\Documents\Visual Studio 2013\Projects\WCF\Store_Pashnev3\Host\obj\Debug\Host.pdb

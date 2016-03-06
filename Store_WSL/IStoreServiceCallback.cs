@@ -9,6 +9,6 @@ namespace Store_WSL
   public interface IStoreServiceCallback
   {
     [OperationContract(IsOneWay = true)]
-    void DbRenew();
+    void DbRenew(DataBase db);
   }
 }

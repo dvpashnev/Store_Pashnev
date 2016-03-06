@@ -264,53 +264,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IStoreService_SetPosition_output_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
   <wsp:Policy wsu:Id="WSDualHttpBinding_IStoreService_SetProduct_Input_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IStoreService_SetProduct_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -356,53 +310,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IStoreService_DelProduct_output_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
   <wsp:Policy wsu:Id="WSDualHttpBinding_IStoreService_SetDepartment_Input_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IStoreService_SetDepartment_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -448,53 +356,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IStoreService_SetEmployee_output_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
   <wsp:Policy wsu:Id="WSDualHttpBinding_IStoreService_SetUser_Input_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IStoreService_SetUser_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -540,29 +402,6 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IStoreService_SetClient_output_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
   <wsp:Policy wsu:Id="WSDualHttpBinding_IStoreService_SetOrder_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -586,53 +425,7 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IStoreService_SetOrder_output_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
   <wsp:Policy wsu:Id="WSDualHttpBinding_IStoreService_RemoveOrder_Input_policy">
-    <wsp:ExactlyOne>
-      <wsp:All>
-        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-          <sp:Header Name="Sequence" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="SequenceAcknowledgement" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="AckRequested" Namespace="http://schemas.xmlsoap.org/ws/2005/02/rm" />
-          <sp:Header Name="ChannelInstance" Namespace="http://schemas.microsoft.com/ws/2005/02/duplex" />
-          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
-          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
-        </sp:SignedParts>
-        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <sp:Body />
-        </sp:EncryptedParts>
-      </wsp:All>
-    </wsp:ExactlyOne>
-  </wsp:Policy>
-  <wsp:Policy wsu:Id="WSDualHttpBinding_IStoreService_RemoveOrder_output_policy">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -708,56 +501,29 @@
   <wsdl:message name="IStoreService_SetPosition_InputMessage">
     <wsdl:part name="parameters" element="tns:SetPosition" />
   </wsdl:message>
-  <wsdl:message name="IStoreService_SetPosition_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SetPositionResponse" />
-  </wsdl:message>
   <wsdl:message name="IStoreService_SetProduct_InputMessage">
     <wsdl:part name="parameters" element="tns:SetProduct" />
-  </wsdl:message>
-  <wsdl:message name="IStoreService_SetProduct_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SetProductResponse" />
   </wsdl:message>
   <wsdl:message name="IStoreService_DelProduct_InputMessage">
     <wsdl:part name="parameters" element="tns:DelProduct" />
   </wsdl:message>
-  <wsdl:message name="IStoreService_DelProduct_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DelProductResponse" />
-  </wsdl:message>
   <wsdl:message name="IStoreService_SetDepartment_InputMessage">
     <wsdl:part name="parameters" element="tns:SetDepartment" />
-  </wsdl:message>
-  <wsdl:message name="IStoreService_SetDepartment_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SetDepartmentResponse" />
   </wsdl:message>
   <wsdl:message name="IStoreService_SetEmployee_InputMessage">
     <wsdl:part name="parameters" element="tns:SetEmployee" />
   </wsdl:message>
-  <wsdl:message name="IStoreService_SetEmployee_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SetEmployeeResponse" />
-  </wsdl:message>
   <wsdl:message name="IStoreService_SetUser_InputMessage">
     <wsdl:part name="parameters" element="tns:SetUser" />
-  </wsdl:message>
-  <wsdl:message name="IStoreService_SetUser_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SetUserResponse" />
   </wsdl:message>
   <wsdl:message name="IStoreService_SetClient_InputMessage">
     <wsdl:part name="parameters" element="tns:SetClient" />
   </wsdl:message>
-  <wsdl:message name="IStoreService_SetClient_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SetClientResponse" />
-  </wsdl:message>
   <wsdl:message name="IStoreService_SetOrder_InputMessage">
     <wsdl:part name="parameters" element="tns:SetOrder" />
   </wsdl:message>
-  <wsdl:message name="IStoreService_SetOrder_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SetOrderResponse" />
-  </wsdl:message>
   <wsdl:message name="IStoreService_RemoveOrder_InputMessage">
     <wsdl:part name="parameters" element="tns:RemoveOrder" />
-  </wsdl:message>
-  <wsdl:message name="IStoreService_RemoveOrder_OutputMessage">
-    <wsdl:part name="parameters" element="tns:RemoveOrderResponse" />
   </wsdl:message>
   <wsdl:message name="IStoreService_DbRenew_OutputCallbackMessage">
     <wsdl:part name="parameters" element="tns:DbRenew" />
@@ -777,39 +543,30 @@
     </wsdl:operation>
     <wsdl:operation name="SetPosition">
       <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/SetPosition" message="tns:IStoreService_SetPosition_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/SetPositionResponse" message="tns:IStoreService_SetPosition_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="SetProduct">
       <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/SetProduct" message="tns:IStoreService_SetProduct_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/SetProductResponse" message="tns:IStoreService_SetProduct_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="DelProduct">
       <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/DelProduct" message="tns:IStoreService_DelProduct_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/DelProductResponse" message="tns:IStoreService_DelProduct_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="SetDepartment">
       <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/SetDepartment" message="tns:IStoreService_SetDepartment_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/SetDepartmentResponse" message="tns:IStoreService_SetDepartment_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="SetEmployee">
       <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/SetEmployee" message="tns:IStoreService_SetEmployee_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/SetEmployeeResponse" message="tns:IStoreService_SetEmployee_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="SetUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/SetUser" message="tns:IStoreService_SetUser_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/SetUserResponse" message="tns:IStoreService_SetUser_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="SetClient">
       <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/SetClient" message="tns:IStoreService_SetClient_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/SetClientResponse" message="tns:IStoreService_SetClient_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="SetOrder">
       <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/SetOrder" message="tns:IStoreService_SetOrder_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/SetOrderResponse" message="tns:IStoreService_SetOrder_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="RemoveOrder">
       <wsdl:input wsaw:Action="http://tempuri.org/IStoreService/RemoveOrder" message="tns:IStoreService_RemoveOrder_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/RemoveOrderResponse" message="tns:IStoreService_RemoveOrder_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="DbRenew">
       <wsdl:output wsaw:Action="http://tempuri.org/IStoreService/DbRenew" message="tns:IStoreService_DbRenew_OutputCallbackMessage" />
@@ -857,10 +614,6 @@
         <wsp:PolicyReference URI="#WSDualHttpBinding_IStoreService_SetPosition_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
-      <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IStoreService_SetPosition_output_policy" />
-        <soap12:body use="literal" />
-      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SetProduct">
       <soap12:operation soapAction="http://tempuri.org/IStoreService/SetProduct" style="document" />
@@ -868,10 +621,6 @@
         <wsp:PolicyReference URI="#WSDualHttpBinding_IStoreService_SetProduct_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
-      <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IStoreService_SetProduct_output_policy" />
-        <soap12:body use="literal" />
-      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DelProduct">
       <soap12:operation soapAction="http://tempuri.org/IStoreService/DelProduct" style="document" />
@@ -879,10 +628,6 @@
         <wsp:PolicyReference URI="#WSDualHttpBinding_IStoreService_DelProduct_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
-      <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IStoreService_DelProduct_output_policy" />
-        <soap12:body use="literal" />
-      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SetDepartment">
       <soap12:operation soapAction="http://tempuri.org/IStoreService/SetDepartment" style="document" />
@@ -890,10 +635,6 @@
         <wsp:PolicyReference URI="#WSDualHttpBinding_IStoreService_SetDepartment_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
-      <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IStoreService_SetDepartment_output_policy" />
-        <soap12:body use="literal" />
-      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SetEmployee">
       <soap12:operation soapAction="http://tempuri.org/IStoreService/SetEmployee" style="document" />
@@ -901,10 +642,6 @@
         <wsp:PolicyReference URI="#WSDualHttpBinding_IStoreService_SetEmployee_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
-      <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IStoreService_SetEmployee_output_policy" />
-        <soap12:body use="literal" />
-      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SetUser">
       <soap12:operation soapAction="http://tempuri.org/IStoreService/SetUser" style="document" />
@@ -912,10 +649,6 @@
         <wsp:PolicyReference URI="#WSDualHttpBinding_IStoreService_SetUser_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
-      <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IStoreService_SetUser_output_policy" />
-        <soap12:body use="literal" />
-      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SetClient">
       <soap12:operation soapAction="http://tempuri.org/IStoreService/SetClient" style="document" />
@@ -923,10 +656,6 @@
         <wsp:PolicyReference URI="#WSDualHttpBinding_IStoreService_SetClient_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
-      <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IStoreService_SetClient_output_policy" />
-        <soap12:body use="literal" />
-      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="SetOrder">
       <soap12:operation soapAction="http://tempuri.org/IStoreService/SetOrder" style="document" />
@@ -934,10 +663,6 @@
         <wsp:PolicyReference URI="#WSDualHttpBinding_IStoreService_SetOrder_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
-      <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IStoreService_SetOrder_output_policy" />
-        <soap12:body use="literal" />
-      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RemoveOrder">
       <soap12:operation soapAction="http://tempuri.org/IStoreService/RemoveOrder" style="document" />
@@ -945,10 +670,6 @@
         <wsp:PolicyReference URI="#WSDualHttpBinding_IStoreService_RemoveOrder_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
-      <wsdl:output>
-        <wsp:PolicyReference URI="#WSDualHttpBinding_IStoreService_RemoveOrder_output_policy" />
-        <soap12:body use="literal" />
-      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DbRenew">
       <soap12:operation soapAction="http://tempuri.org/IStoreService/DbRenew" style="document" />

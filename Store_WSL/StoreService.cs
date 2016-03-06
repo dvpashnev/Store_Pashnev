@@ -16,6 +16,8 @@ namespace Store_WSL
   {
     DataBase _db;
 
+    public static event Action<DataBase> OnDBChanged;
+
     public int GetUserId(string n, string p)
     {
       int id;
@@ -61,6 +63,12 @@ namespace Store_WSL
     public DataBase GetDatabaseAccess(int userId)
     {
       _db = new DataBase(userId);
+
+      OperationContext ctx = OperationContext.Current;
+      IStoreServiceCallback callback = ctx.GetCallbackChannel<IStoreServiceCallback>();
+
+      OnDBChanged += callback.DbRenew;
+
       return _db;
     }
 
@@ -78,7 +86,7 @@ namespace Store_WSL
       return curIdentity;
     }
 
-    public DataBase SetProduct(Product product)
+    public void SetProduct(Product product)
     {
       DataRow row = _db._ds.Tables["Product"].Rows.Find(product.Id);
       if (row == null)
@@ -111,17 +119,17 @@ namespace Store_WSL
 
       _db._adapterProduct.Update(_db._ds.Tables["Product"]);
 
-      return _db;
+      OnDBChanged(_db);
     }
 
-    public DataBase DelProduct(Product product)
+    public void DelProduct(Product product)
     {
       _db._ds.Tables["Product"].Rows.Find(product.Id).Delete();
       _db._adapterProduct.Update(_db._ds.Tables["Product"]);
-      return _db;
+      OnDBChanged(_db);
     }
 
-    public DataBase SetPosition(Position position)
+    public void SetPosition(Position position)
     {
       DataRow row = _db._ds.Tables["Position"].Rows.Find(position.Id);
 
@@ -174,10 +182,10 @@ namespace Store_WSL
 
       _db._adapterPosition.Update(_db._ds.Tables["Position"]);
 
-      return _db;
+      OnDBChanged(_db);
     }
 
-    public DataBase SetDepartment(Department department)
+    public void SetDepartment(Department department)
     {
       DataRow row = _db._ds.Tables["Department"].Rows.Find(department.Id);
 
@@ -198,10 +206,10 @@ namespace Store_WSL
 
       _db._adapterDepartment.Update(_db._ds.Tables["Department"]);
 
-      return _db;
+      OnDBChanged(_db);
     }
 
-    public DataBase SetEmployee(Employee employee)
+    public void SetEmployee(Employee employee)
     {
       DataRow row = _db._ds.Tables["Employee"].Rows.Find(employee.Id);
 
@@ -236,10 +244,10 @@ namespace Store_WSL
 
       _db._adapterEmployee.Update(_db._ds.Tables["Employee"]);
 
-      return _db;
+      OnDBChanged(_db);
     }
 
-    public DataBase SetUser(User user)
+    public void SetUser(User user)
     {
       DataRow row = _db._ds.Tables["User"].Rows.Find(user.Id);
 
@@ -264,10 +272,10 @@ namespace Store_WSL
 
       _db._adapterUser.Update(_db._ds.Tables["User"]);
 
-      return _db;
+      OnDBChanged(_db);
     }
 
-    public DataBase SetClient(Client client)
+    public void SetClient(Client client)
     {
       DataRow row = _db._ds.Tables["Client"].Rows.Find(client.Id);
 
@@ -310,10 +318,10 @@ namespace Store_WSL
 
       _db._adapterClient.Update(_db._ds.Tables["Client"]);
 
-      return _db;
+      OnDBChanged(_db);
     }
 
-    public DataBase SetOrder(Order order)
+    public void SetOrder(Order order)
     {
       DataRow row = _db._ds.Tables["Order"].Rows.Find(order.Id);
 
@@ -391,10 +399,10 @@ namespace Store_WSL
       _db._adapterEmployee.Fill(_db._ds.Tables["Employee"]);
       _db._adapterClient.Fill(_db._ds.Tables["Client"]);
 
-      return _db;
+      OnDBChanged(_db);
     }
 
-    public DataBase RemoveOrder(Order order)
+    public void RemoveOrder(Order order)
     {
       DataRow[] rows = _db._ds.Tables["Products_in_Order"].Select("OrderId = " + order.Id).ToArray();
 
@@ -408,12 +416,14 @@ namespace Store_WSL
       DataRow rowInOrder = _db._ds.Tables["Order"].Rows.Find(order.Id);
 
       rowInOrder.Delete();
-
-
-
+      
       _db._adapterOrder.Update(_db._ds.Tables["Order"]);
 
-      return _db;
+      _db._adapterProduct.Fill(_db._ds.Tables["Product"]);
+      _db._adapterEmployee.Fill(_db._ds.Tables["Employee"]);
+      _db._adapterClient.Fill(_db._ds.Tables["Client"]);
+
+      OnDBChanged(_db);
     }
   }
 }

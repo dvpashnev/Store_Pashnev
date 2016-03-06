@@ -155,7 +155,9 @@
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\DataSources\Store_WSL.DataBase.datasource" />
     <None Include="Properties\DataSources\Store_WSL.Order.datasource" />
     <None Include="Properties\Settings.settings">

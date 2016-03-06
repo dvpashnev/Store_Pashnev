@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
-using System.Drawing.Drawing2D;
 using System.Globalization;
-using System.IO;
-using System.Runtime.InteropServices;
 using System.ServiceModel;
 using System.Text;
+using System.Threading;
 using Store_Pashnev.ServiceReference1;
 using System;
 using System.Data;
@@ -16,10 +14,11 @@ using IStoreServiceCallback = Store_Pashnev.ServiceReference1.IStoreServiceCallb
 
 namespace Store_Pashnev
 {
-  [CallbackBehavior(UseSynchronizationContext = false)]
+  [CallbackBehavior(UseSynchronizationContext = false, ConcurrencyMode = ConcurrencyMode.Reentrant)]
   public partial class Form1 : Form, IStoreServiceCallback
   {
     private StoreServiceClient client;
+    private AutoResetEvent _waitForResponse;
 
     private DataBase _db;
 
@@ -46,8 +45,10 @@ namespace Store_Pashnev
 
     public Form1()
     {
-
       InitializeComponent();
+
+      _waitForResponse = new AutoResetEvent(false);
+
       InstanceContext callbackInstance = new InstanceContext(this);
       client = new StoreServiceClient(callbackInstance);
     }
@@ -57,9 +58,9 @@ namespace Store_Pashnev
       // Enter, authentification and authorization
 
       EnterForm ef = new EnterForm(client);
-      //ef.Owner = this;
-      ef.ShowDialog();
 
+      ef.ShowDialog();
+      
       _user = ef.user;
 
       if (_user.Id == 0)
@@ -276,7 +277,7 @@ namespace Store_Pashnev
         DepsCB.ValueMember = "Id";
 
         //for Management
-
+        
         dataGridViewRoles.DataSource = _db._ds.Tables["Position"];
 
         dataGridViewUsers.DataSource = _db._ds.Tables["User"];
@@ -621,7 +622,8 @@ namespace Store_Pashnev
 
       if (product.Id != 0)
       {
-        _db = client.SetProduct(product);
+        client.SetProduct(product);
+        //_waitForResponse.WaitOne();
       }
 
       bsProducts = new BindingSource { DataSource = _db._ds.Tables["Product"] };
@@ -789,13 +791,8 @@ namespace Store_Pashnev
         Convert.ToInt32(dataGridViewProducts.Rows[index].Cells["Quantity"].Value),
         Convert.ToBoolean(dataGridViewProducts.Rows[index].Cells["CriticalQ"].Value));
 
-      _db = client.DelProduct(product);
-
-      bsProducts = new BindingSource { DataSource = _db._ds.Tables["Product"] };
-      dataGridViewProducts.DataSource = bsProducts;
-      bindingNavigatorProducts.BindingSource = bsProducts;
-
-      ProductsBinding();
+      client.DelProduct(product);
+      //_waitForResponse.WaitOne();
     }
 
     #endregion
@@ -1007,13 +1004,8 @@ namespace Store_Pashnev
         Convert.ToDouble(textBoxAllSum.Text),
         prodsDictionary);
 
-      _db = client.SetOrder(_order);
-
-      bsProducts = new BindingSource { DataSource = _db._ds.Tables["Product"] };
-      dataGridViewProducts.DataSource = bsProducts;
-      bindingNavigatorProducts.BindingSource = bsProducts;
-
-      ProductsBinding();
+      client.SetOrder(_order);
+      //_waitForResponse.WaitOne();
 
       _order.Clear();
       clearOrder();
@@ -1179,7 +1171,8 @@ namespace Store_Pashnev
 
       if ((client.GetCurIdentity("Order") + 1) > Convert.ToInt32(textBoxOrderId.Text))
       {
-        _db = client.RemoveOrder(_order);
+        client.RemoveOrder(_order);
+        //_waitForResponse.WaitOne();
       }
 
       clearOrder();
@@ -1245,14 +1238,8 @@ namespace Store_Pashnev
 
         if (clnt.Id != 0)
         {
-          _db = client.SetClient(clnt);
-
-          bsClients = new BindingSource {DataSource = _db._ds.Tables["Client"]};
-          dataGridViewClients.DataSource = bsClients;
-          dataGridViewClients.Columns[0].Visible = false;
-          bindingNavigatorClients.BindingSource = bsClients;
-
-          ClientsBinding();
+          client.SetClient(clnt);
+          //_waitForResponse.WaitOne();
         }
       }
       else
@@ -1274,14 +1261,8 @@ namespace Store_Pashnev
 
       if (clnt.Id != 0)
       {
-        _db = client.SetClient(clnt);
-
-        bsClients = new BindingSource { DataSource = _db._ds.Tables["Client"] };
-        dataGridViewClients.DataSource = bsClients;
-        dataGridViewClients.Columns[0].Visible = false;
-        bindingNavigatorClients.BindingSource = bsClients;
-
-        ClientsBinding();
+        client.SetClient(clnt);
+        //_waitForResponse.WaitOne();
       }
     }
 
@@ -1664,7 +1645,8 @@ namespace Store_Pashnev
 
       if (position.Id != 0)
       {
-        _db = client.SetPosition(position);
+        client.SetPosition(position);
+        //_waitForResponse.WaitOne();
       }
     }
 
@@ -1701,9 +1683,8 @@ namespace Store_Pashnev
 
         position = pf.position;
 
-        _db = client.SetPosition(position);
-        dataGridViewRoles.Invalidate();
-        dataGridViewRoles.Refresh();
+        client.SetPosition(position);
+        //_waitForResponse.WaitOne();
       }
     }
 
@@ -1747,7 +1728,9 @@ namespace Store_Pashnev
 
       if (dep.Id != 0)
       {
-        _db = client.SetDepartment(dep);
+        client.SetDepartment(dep);
+
+        //_waitForResponse.WaitOne();
 
         treeViewDepEmpl.BeginUpdate();
         treeViewDepEmpl.Nodes.Add(new TreeNode(dep.Name));
@@ -1796,11 +1779,11 @@ namespace Store_Pashnev
 
       if (employee.Id != 0)
       {
-        _db = client.SetUser(user);
+        client.SetUser(user);
+        //_waitForResponse.WaitOne();
 
-        _db = client.SetEmployee(employee);
-
-        treeViewUpdate();
+        client.SetEmployee(employee);
+        //_waitForResponse.WaitOne();
       }
     }
 
@@ -1838,9 +1821,8 @@ namespace Store_Pashnev
 
         if (employee.Id != 0)
         {
-          _db = client.SetEmployee(employee);
-
-          treeViewUpdate();
+          client.SetEmployee(employee);
+          //_waitForResponse.WaitOne();
         }
       }
     }
@@ -1947,10 +1929,42 @@ namespace Store_Pashnev
 
     #region IStoreServiceCallback membres
     
-    public void DbRenew()
+    public void DbRenew(DataBase db)
     {
+      if (_db.Equals(db))
+      {
+        return;
+      }
 
+      _db = db;
+
+      Invoke(new Action(() =>
+      {
+        bsProducts = new BindingSource { DataSource = _db._ds.Tables["Product"] };
+        dataGridViewProducts.DataSource = bsProducts;
+        dataGridViewProducts.Columns[0].Visible = false;
+        bindingNavigatorProducts.BindingSource = bsProducts;
+
+        ProductsBinding();
+
+        bsClients = new BindingSource { DataSource = _db._ds.Tables["Client"] };
+        dataGridViewClients.DataSource = bsClients;
+        dataGridViewClients.Columns[0].Visible = false;
+        bindingNavigatorClients.BindingSource = bsClients;
+
+        ClientsBinding();
+
+        dataGridViewRoles.DataSource = _db._ds.Tables["Position"];
+
+        dataGridViewUsers.DataSource = _db._ds.Tables["User"];
+
+        treeViewUpdate();
+
+      }));
+      
+      //_waitForResponse.Set();
     }
+
     #endregion
 
   }

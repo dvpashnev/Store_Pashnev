@@ -10,39 +10,30 @@ namespace Store_WSL
   [DataContract]
   public class Department
   {
-    private int _id;
-    private string _name;
+    [DataMember]
+    public int Id { get; set; }
 
     [DataMember]
-    public int Id
-    {
-      get { return _id; }
-    }
-
-    [DataMember]
-    public string Name
-    {
-      get { return _name; }
-    }
+    public string Name { get; set; }
 
     public void SetValues(
       int id,
       string name
       )
     {
-      _id = id;
-      _name = name;
+      Id = id;
+      Name = name;
     }
 
     public void Clear()
     {
-      _id = 0;
-      _name = "";
+      Id = 0;
+      Name = "";
     }
 
     public void SetId(int id)
     {
-      _id = id;
+      Id = id;
     }
   }
 }
