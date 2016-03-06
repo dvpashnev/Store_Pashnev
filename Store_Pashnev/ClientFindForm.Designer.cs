@@ -49,7 +49,6 @@
       this.radioButtonMale = new System.Windows.Forms.RadioButton();
       this.labelBD = new System.Windows.Forms.Label();
       this.labelSex = new System.Windows.Forms.Label();
-      this.button1 = new System.Windows.Forms.Button();
       this.dgwClients = new System.Windows.Forms.DataGridView();
       this.btnFind = new System.Windows.Forms.Button();
       this.btnClear = new System.Windows.Forms.Button();
@@ -62,7 +61,7 @@
       this.labelBD1 = new System.Windows.Forms.Label();
       this.labelBD2 = new System.Windows.Forms.Label();
       this.dateTimePickerBDTo = new System.Windows.Forms.DateTimePicker();
-      this.button2 = new System.Windows.Forms.Button();
+      this.ToOrderBtn = new System.Windows.Forms.Button();
       ((System.ComponentModel.ISupportInitialize)(this.dgwClients)).BeginInit();
       this.SuspendLayout();
       // 
@@ -246,16 +245,6 @@
       this.labelSex.TabIndex = 0;
       this.labelSex.Text = "Пол";
       // 
-      // button1
-      // 
-      this.button1.Location = new System.Drawing.Point(12, 487);
-      this.button1.Name = "button1";
-      this.button1.Size = new System.Drawing.Size(237, 23);
-      this.button1.TabIndex = 23;
-      this.button1.Text = "Сделать выделенного клиента текущим";
-      this.button1.UseVisualStyleBackColor = true;
-      this.button1.Click += new System.EventHandler(this.button1_Click);
-      // 
       // dgwClients
       // 
       this.dgwClients.AllowUserToAddRows = false;
@@ -361,15 +350,15 @@
       this.dateTimePickerBDTo.Size = new System.Drawing.Size(94, 20);
       this.dateTimePickerBDTo.TabIndex = 35;
       // 
-      // button2
+      // ToOrderBtn
       // 
-      this.button2.Location = new System.Drawing.Point(322, 487);
-      this.button2.Name = "button2";
-      this.button2.Size = new System.Drawing.Size(144, 23);
-      this.button2.TabIndex = 36;
-      this.button2.Text = "Закрепить за заказом";
-      this.button2.UseVisualStyleBackColor = true;
-      this.button2.Click += new System.EventHandler(this.button2_Click);
+      this.ToOrderBtn.Location = new System.Drawing.Point(322, 487);
+      this.ToOrderBtn.Name = "ToOrderBtn";
+      this.ToOrderBtn.Size = new System.Drawing.Size(144, 23);
+      this.ToOrderBtn.TabIndex = 36;
+      this.ToOrderBtn.Text = "Закрепить за заказом";
+      this.ToOrderBtn.UseVisualStyleBackColor = true;
+      this.ToOrderBtn.Click += new System.EventHandler(this.ToOrderBtn_Click);
       // 
       // ClientFindForm
       // 
@@ -377,7 +366,7 @@
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(679, 532);
       this.ControlBox = false;
-      this.Controls.Add(this.button2);
+      this.Controls.Add(this.ToOrderBtn);
       this.Controls.Add(this.dateTimePickerBDTo);
       this.Controls.Add(this.labelBD2);
       this.Controls.Add(this.labelBD1);
@@ -400,7 +389,6 @@
       this.Controls.Add(this.dgwClients);
       this.Controls.Add(this.labelPhone);
       this.Controls.Add(this.textBoxSumFrom);
-      this.Controls.Add(this.button1);
       this.Controls.Add(this.textBoxMN);
       this.Controls.Add(this.buttonCansel);
       this.Controls.Add(this.textBoxFN);
@@ -444,7 +432,6 @@
     private System.Windows.Forms.RadioButton radioButtonMale;
     private System.Windows.Forms.Label labelBD;
     private System.Windows.Forms.Label labelSex;
-    private System.Windows.Forms.Button button1;
     private System.Windows.Forms.DataGridView dgwClients;
     private System.Windows.Forms.Button btnFind;
     private System.Windows.Forms.Button btnClear;
@@ -457,6 +444,6 @@
     private System.Windows.Forms.Label labelBD1;
     private System.Windows.Forms.Label labelBD2;
     private System.Windows.Forms.DateTimePicker dateTimePickerBDTo;
-    private System.Windows.Forms.Button button2;
+    private System.Windows.Forms.Button ToOrderBtn;
   }
 }

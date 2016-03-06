@@ -30,15 +30,19 @@
     {
       this.components = new System.ComponentModel.Container();
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+      System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
       this.tabControlMain = new System.Windows.Forms.TabControl();
       this.Products = new System.Windows.Forms.TabPage();
-      this.button8 = new System.Windows.Forms.Button();
-      this.button19 = new System.Windows.Forms.Button();
+      this.DelProductBtn = new System.Windows.Forms.Button();
+      this.MarkupNumericUpDown = new System.Windows.Forms.NumericUpDown();
+      this.PurchasePriceNumericUpDown = new System.Windows.Forms.NumericUpDown();
+      this.label12 = new System.Windows.Forms.Label();
+      this.label13 = new System.Windows.Forms.Label();
+      this.EditProductBtn = new System.Windows.Forms.Button();
+      this.NewProductBtn = new System.Windows.Forms.Button();
       this.label29 = new System.Windows.Forms.Label();
       this.groupBox8 = new System.Windows.Forms.GroupBox();
-      this.button24 = new System.Windows.Forms.Button();
-      this.button1 = new System.Windows.Forms.Button();
+      this.AddSelectedProdsInOrder = new System.Windows.Forms.Button();
       this.bindingNavigatorProducts = new System.Windows.Forms.BindingNavigator(this.components);
       this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
       this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -50,7 +54,7 @@
       this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
       this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
       this.groupBoxFind = new System.Windows.Forms.GroupBox();
-      this.button2 = new System.Windows.Forms.Button();
+      this.ClearFindStringBtn = new System.Windows.Forms.Button();
       this.textBoxStringToFind = new System.Windows.Forms.TextBox();
       this.label2 = new System.Windows.Forms.Label();
       this.comboBoxCriteriaFilterProduct = new System.Windows.Forms.ComboBox();
@@ -75,7 +79,7 @@
       this.textBoxID = new System.Windows.Forms.TextBox();
       this.labelID = new System.Windows.Forms.Label();
       this.Order = new System.Windows.Forms.TabPage();
-      this.button5 = new System.Windows.Forms.Button();
+      this.CanselOrderBtn = new System.Windows.Forms.Button();
       this.label37 = new System.Windows.Forms.Label();
       this.groupBox11 = new System.Windows.Forms.GroupBox();
       this.checkBoxDefaultAdress = new System.Windows.Forms.CheckBox();
@@ -86,7 +90,7 @@
       this.numericUpDownProdQuantity = new System.Windows.Forms.NumericUpDown();
       this.label43 = new System.Windows.Forms.Label();
       this.comboBoxEmpl = new System.Windows.Forms.ComboBox();
-      this.button20 = new System.Windows.Forms.Button();
+      this.AddClientToOrder = new System.Windows.Forms.Button();
       this.comboBoxOrderCat = new System.Windows.Forms.ComboBox();
       this.label24 = new System.Windows.Forms.Label();
       this.textBoxAllSum = new System.Windows.Forms.TextBox();
@@ -98,9 +102,10 @@
       this.buttonAddProductToOrder = new System.Windows.Forms.Button();
       this.dataGridViewProdsInOrder = new System.Windows.Forms.DataGridView();
       this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-      this.PriceWithDiscount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+      this.FinalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.Sum = new System.Windows.Forms.DataGridViewTextBoxColumn();
       this.textBoxClient = new System.Windows.Forms.TextBox();
@@ -112,7 +117,7 @@
       this.label5 = new System.Windows.Forms.Label();
       this.label3 = new System.Windows.Forms.Label();
       this.Clients = new System.Windows.Forms.TabPage();
-      this.button23 = new System.Windows.Forms.Button();
+      this.ClientFindBtn = new System.Windows.Forms.Button();
       this.groupBox14 = new System.Windows.Forms.GroupBox();
       this.buttonClearCrit = new System.Windows.Forms.Button();
       this.tbLiterasToFindClient = new System.Windows.Forms.TextBox();
@@ -131,7 +136,7 @@
       this.bindingNavigatorMoveLastItem2 = new System.Windows.Forms.ToolStripButton();
       this.bindingNavigatorSeparator8 = new System.Windows.Forms.ToolStripSeparator();
       this.buttonBindToOrder = new System.Windows.Forms.Button();
-      this.button15 = new System.Windows.Forms.Button();
+      this.NewClientBtn = new System.Windows.Forms.Button();
       this.label23 = new System.Windows.Forms.Label();
       this.dataGridViewClients = new System.Windows.Forms.DataGridView();
       this.contextMenuStripClients = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -149,6 +154,8 @@
       this.labelPhone2 = new System.Windows.Forms.Label();
       this.labelPhone1 = new System.Windows.Forms.Label();
       this.groupBox2 = new System.Windows.Forms.GroupBox();
+      this.textBoxFirmName = new System.Windows.Forms.TextBox();
+      this.labelFirmName = new System.Windows.Forms.Label();
       this.textBoxDiscount = new System.Windows.Forms.TextBox();
       this.textBoxSO = new System.Windows.Forms.TextBox();
       this.textBoxMN = new System.Windows.Forms.TextBox();
@@ -167,53 +174,27 @@
       this.radioButtonClientMale = new System.Windows.Forms.RadioButton();
       this.labelBD = new System.Windows.Forms.Label();
       this.labelSex = new System.Windows.Forms.Label();
-      this.Claims = new System.Windows.Forms.TabPage();
-      this.comboBox1 = new System.Windows.Forms.ComboBox();
-      this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-      this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
-      this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
-      this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
-      this.bindingNavigatorSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-      this.bindingNavigatorPositionItem1 = new System.Windows.Forms.ToolStripTextBox();
-      this.bindingNavigatorSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-      this.bindingNavigatorMoveNextItem1 = new System.Windows.Forms.ToolStripButton();
-      this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
-      this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-      this.dataGridView5 = new System.Windows.Forms.DataGridView();
-      this.button14 = new System.Windows.Forms.Button();
-      this.textBox20 = new System.Windows.Forms.TextBox();
-      this.textBox19 = new System.Windows.Forms.TextBox();
-      this.textBox18 = new System.Windows.Forms.TextBox();
-      this.label36 = new System.Windows.Forms.Label();
-      this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
-      this.label35 = new System.Windows.Forms.Label();
-      this.label34 = new System.Windows.Forms.Label();
-      this.label33 = new System.Windows.Forms.Label();
-      this.label32 = new System.Windows.Forms.Label();
       this.Reports = new System.Windows.Forms.TabPage();
       this.splitContainer1 = new System.Windows.Forms.SplitContainer();
       this.groupBox13 = new System.Windows.Forms.GroupBox();
-      this.button16 = new System.Windows.Forms.Button();
-      this.comboBox7 = new System.Windows.Forms.ComboBox();
-      this.comboBox6 = new System.Windows.Forms.ComboBox();
-      this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
+      this.ShowRanksBtn = new System.Windows.Forms.Button();
+      this.RanksCritCB = new System.Windows.Forms.ComboBox();
+      this.DepsCB = new System.Windows.Forms.ComboBox();
+      this.RanksEndDate = new System.Windows.Forms.DateTimePicker();
       this.label30 = new System.Windows.Forms.Label();
       this.label31 = new System.Windows.Forms.Label();
-      this.dateTimePicker7 = new System.Windows.Forms.DateTimePicker();
+      this.RanksBeginDate = new System.Windows.Forms.DateTimePicker();
       this.groupBox7 = new System.Windows.Forms.GroupBox();
-      this.button12 = new System.Windows.Forms.Button();
-      this.comboBox5 = new System.Windows.Forms.ComboBox();
+      this.ShowSalesCB = new System.Windows.Forms.Button();
+      this.SalesCriterCB = new System.Windows.Forms.ComboBox();
       this.groupBox4 = new System.Windows.Forms.GroupBox();
-      this.button9 = new System.Windows.Forms.Button();
-      this.comboBox3 = new System.Windows.Forms.ComboBox();
-      this.groupBox6 = new System.Windows.Forms.GroupBox();
-      this.button11 = new System.Windows.Forms.Button();
-      this.comboBox4 = new System.Windows.Forms.ComboBox();
+      this.ShowСostsNBenefitsBtn = new System.Windows.Forms.Button();
+      this.СostsNBenefitsCriterCB = new System.Windows.Forms.ComboBox();
       this.groupBox5 = new System.Windows.Forms.GroupBox();
-      this.button10 = new System.Windows.Forms.Button();
-      this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
+      this.ShowProfitBtn = new System.Windows.Forms.Button();
+      this.ProfitEndDate = new System.Windows.Forms.DateTimePicker();
       this.label26 = new System.Windows.Forms.Label();
-      this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+      this.ProfitBeginDate = new System.Windows.Forms.DateTimePicker();
       this.label25 = new System.Windows.Forms.Label();
       this.Management = new System.Windows.Forms.TabPage();
       this.groupBox12 = new System.Windows.Forms.GroupBox();
@@ -222,24 +203,26 @@
       this.newDepToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.newEmpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
       this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-      this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-      this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+      this.editDepToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.delDepToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-      this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-      this.удалитьРаботникаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.editEmpltoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.delEmplToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.groupBox10 = new System.Windows.Forms.GroupBox();
-      this.button4 = new System.Windows.Forms.Button();
-      this.button22 = new System.Windows.Forms.Button();
-      this.button18 = new System.Windows.Forms.Button();
+      this.UserDelBtn = new System.Windows.Forms.Button();
+      this.NewUserBtn = new System.Windows.Forms.Button();
+      this.UserEditBtn = new System.Windows.Forms.Button();
       this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
       this.groupBox9 = new System.Windows.Forms.GroupBox();
-      this.button3 = new System.Windows.Forms.Button();
-      this.button17 = new System.Windows.Forms.Button();
-      this.button13 = new System.Windows.Forms.Button();
+      this.PositionDelBtn = new System.Windows.Forms.Button();
+      this.ChangePositionBtn = new System.Windows.Forms.Button();
+      this.newPositionBtn = new System.Windows.Forms.Button();
       this.dataGridViewRoles = new System.Windows.Forms.DataGridView();
       this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
       this.tabControlMain.SuspendLayout();
       this.Products.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.MarkupNumericUpDown)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.PurchasePriceNumericUpDown)).BeginInit();
       this.groupBox8.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorProducts)).BeginInit();
       this.bindingNavigatorProducts.SuspendLayout();
@@ -259,10 +242,6 @@
       this.groupBox3.SuspendLayout();
       this.groupBox2.SuspendLayout();
       this.groupBox1.SuspendLayout();
-      this.Claims.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-      this.bindingNavigator1.SuspendLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
       this.Reports.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
       this.splitContainer1.Panel1.SuspendLayout();
@@ -270,7 +249,6 @@
       this.groupBox13.SuspendLayout();
       this.groupBox7.SuspendLayout();
       this.groupBox4.SuspendLayout();
-      this.groupBox6.SuspendLayout();
       this.groupBox5.SuspendLayout();
       this.Management.SuspendLayout();
       this.groupBox12.SuspendLayout();
@@ -286,7 +264,6 @@
       this.tabControlMain.Controls.Add(this.Products);
       this.tabControlMain.Controls.Add(this.Order);
       this.tabControlMain.Controls.Add(this.Clients);
-      this.tabControlMain.Controls.Add(this.Claims);
       this.tabControlMain.Controls.Add(this.Reports);
       this.tabControlMain.Controls.Add(this.Management);
       this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -299,8 +276,13 @@
       // 
       // Products
       // 
-      this.Products.Controls.Add(this.button8);
-      this.Products.Controls.Add(this.button19);
+      this.Products.Controls.Add(this.DelProductBtn);
+      this.Products.Controls.Add(this.MarkupNumericUpDown);
+      this.Products.Controls.Add(this.PurchasePriceNumericUpDown);
+      this.Products.Controls.Add(this.label12);
+      this.Products.Controls.Add(this.label13);
+      this.Products.Controls.Add(this.EditProductBtn);
+      this.Products.Controls.Add(this.NewProductBtn);
       this.Products.Controls.Add(this.label29);
       this.Products.Controls.Add(this.groupBox8);
       this.Products.Controls.Add(this.bindingNavigatorProducts);
@@ -325,25 +307,88 @@
       this.Products.Text = "Товары";
       this.Products.UseVisualStyleBackColor = true;
       // 
-      // button8
+      // DelProductBtn
       // 
-      this.button8.Location = new System.Drawing.Point(355, 410);
-      this.button8.Name = "button8";
-      this.button8.Size = new System.Drawing.Size(95, 23);
-      this.button8.TabIndex = 19;
-      this.button8.Text = "Редактировать";
-      this.button8.UseVisualStyleBackColor = true;
-      this.button8.Click += new System.EventHandler(this.dataGridViewProducts_DoubleClick);
+      this.DelProductBtn.Location = new System.Drawing.Point(473, 410);
+      this.DelProductBtn.Name = "DelProductBtn";
+      this.DelProductBtn.Size = new System.Drawing.Size(95, 23);
+      this.DelProductBtn.TabIndex = 37;
+      this.DelProductBtn.Text = "Удалить";
+      this.DelProductBtn.UseVisualStyleBackColor = true;
+      this.DelProductBtn.Click += new System.EventHandler(this.DelProductBtn_Click);
       // 
-      // button19
+      // MarkupNumericUpDown
       // 
-      this.button19.Location = new System.Drawing.Point(252, 410);
-      this.button19.Name = "button19";
-      this.button19.Size = new System.Drawing.Size(75, 23);
-      this.button19.TabIndex = 18;
-      this.button19.Text = "Новый";
-      this.button19.UseVisualStyleBackColor = true;
-      this.button19.Click += new System.EventHandler(this.newProductToolStripMenuItem_Click);
+      this.MarkupNumericUpDown.Location = new System.Drawing.Point(98, 139);
+      this.MarkupNumericUpDown.Name = "MarkupNumericUpDown";
+      this.MarkupNumericUpDown.Size = new System.Drawing.Size(99, 20);
+      this.MarkupNumericUpDown.TabIndex = 36;
+      this.MarkupNumericUpDown.Value = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
+      // 
+      // PurchasePriceNumericUpDown
+      // 
+      this.PurchasePriceNumericUpDown.DecimalPlaces = 2;
+      this.PurchasePriceNumericUpDown.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+      this.PurchasePriceNumericUpDown.Location = new System.Drawing.Point(98, 104);
+      this.PurchasePriceNumericUpDown.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+      this.PurchasePriceNumericUpDown.Name = "PurchasePriceNumericUpDown";
+      this.PurchasePriceNumericUpDown.Size = new System.Drawing.Size(99, 20);
+      this.PurchasePriceNumericUpDown.TabIndex = 35;
+      this.PurchasePriceNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+      // 
+      // label12
+      // 
+      this.label12.AutoSize = true;
+      this.label12.Location = new System.Drawing.Point(8, 139);
+      this.label12.Name = "label12";
+      this.label12.Size = new System.Drawing.Size(68, 13);
+      this.label12.TabIndex = 34;
+      this.label12.Text = "Наценка (%)";
+      // 
+      // label13
+      // 
+      this.label13.AutoSize = true;
+      this.label13.Location = new System.Drawing.Point(9, 104);
+      this.label13.Name = "label13";
+      this.label13.Size = new System.Drawing.Size(77, 13);
+      this.label13.TabIndex = 33;
+      this.label13.Text = "Цена закупки";
+      // 
+      // EditProductBtn
+      // 
+      this.EditProductBtn.Location = new System.Drawing.Point(355, 410);
+      this.EditProductBtn.Name = "EditProductBtn";
+      this.EditProductBtn.Size = new System.Drawing.Size(95, 23);
+      this.EditProductBtn.TabIndex = 19;
+      this.EditProductBtn.Text = "Редактировать";
+      this.EditProductBtn.UseVisualStyleBackColor = true;
+      this.EditProductBtn.Click += new System.EventHandler(this.OnEditProduct);
+      // 
+      // NewProductBtn
+      // 
+      this.NewProductBtn.Location = new System.Drawing.Point(252, 410);
+      this.NewProductBtn.Name = "NewProductBtn";
+      this.NewProductBtn.Size = new System.Drawing.Size(75, 23);
+      this.NewProductBtn.TabIndex = 18;
+      this.NewProductBtn.Text = "Новый";
+      this.NewProductBtn.UseVisualStyleBackColor = true;
+      this.NewProductBtn.Click += new System.EventHandler(this.OnNewProduct);
       // 
       // label29
       // 
@@ -356,34 +401,23 @@
       // 
       // groupBox8
       // 
-      this.groupBox8.Controls.Add(this.button24);
-      this.groupBox8.Controls.Add(this.button1);
-      this.groupBox8.Location = new System.Drawing.Point(8, 281);
+      this.groupBox8.Controls.Add(this.AddSelectedProdsInOrder);
+      this.groupBox8.Location = new System.Drawing.Point(12, 339);
       this.groupBox8.Name = "groupBox8";
-      this.groupBox8.Size = new System.Drawing.Size(189, 93);
+      this.groupBox8.Size = new System.Drawing.Size(189, 65);
       this.groupBox8.TabIndex = 16;
       this.groupBox8.TabStop = false;
       this.groupBox8.Text = "Добавление в заказ";
       // 
-      // button24
+      // AddSelectedProdsInOrder
       // 
-      this.button24.Location = new System.Drawing.Point(6, 62);
-      this.button24.Name = "button24";
-      this.button24.Size = new System.Drawing.Size(177, 23);
-      this.button24.TabIndex = 18;
-      this.button24.Text = "Добавить весь список в заказ";
-      this.button24.UseVisualStyleBackColor = true;
-      this.button24.Click += new System.EventHandler(this.button24_Click);
-      // 
-      // button1
-      // 
-      this.button1.Location = new System.Drawing.Point(6, 19);
-      this.button1.Name = "button1";
-      this.button1.Size = new System.Drawing.Size(177, 37);
-      this.button1.TabIndex = 13;
-      this.button1.Text = "Добавить выделенные товары\r\nв заказ";
-      this.button1.UseVisualStyleBackColor = true;
-      this.button1.Click += new System.EventHandler(this.button1_Click);
+      this.AddSelectedProdsInOrder.Location = new System.Drawing.Point(6, 19);
+      this.AddSelectedProdsInOrder.Name = "AddSelectedProdsInOrder";
+      this.AddSelectedProdsInOrder.Size = new System.Drawing.Size(177, 37);
+      this.AddSelectedProdsInOrder.TabIndex = 13;
+      this.AddSelectedProdsInOrder.Text = "Добавить выделенные товары\r\nв заказ";
+      this.AddSelectedProdsInOrder.UseVisualStyleBackColor = true;
+      this.AddSelectedProdsInOrder.Click += new System.EventHandler(this.AddSelectedProdsInOrder_Click);
       // 
       // bindingNavigatorProducts
       // 
@@ -480,7 +514,7 @@
       // 
       // groupBoxFind
       // 
-      this.groupBoxFind.Controls.Add(this.button2);
+      this.groupBoxFind.Controls.Add(this.ClearFindStringBtn);
       this.groupBoxFind.Controls.Add(this.textBoxStringToFind);
       this.groupBoxFind.Controls.Add(this.label2);
       this.groupBoxFind.Controls.Add(this.comboBoxCriteriaFilterProduct);
@@ -492,15 +526,15 @@
       this.groupBoxFind.TabStop = false;
       this.groupBoxFind.Text = "Быстрый поиск";
       // 
-      // button2
+      // ClearFindStringBtn
       // 
-      this.button2.Location = new System.Drawing.Point(675, 17);
-      this.button2.Name = "button2";
-      this.button2.Size = new System.Drawing.Size(70, 20);
-      this.button2.TabIndex = 4;
-      this.button2.Text = "Сброс";
-      this.button2.UseVisualStyleBackColor = true;
-      this.button2.Click += new System.EventHandler(this.button2_Click);
+      this.ClearFindStringBtn.Location = new System.Drawing.Point(675, 17);
+      this.ClearFindStringBtn.Name = "ClearFindStringBtn";
+      this.ClearFindStringBtn.Size = new System.Drawing.Size(70, 20);
+      this.ClearFindStringBtn.TabIndex = 4;
+      this.ClearFindStringBtn.Text = "Сброс";
+      this.ClearFindStringBtn.UseVisualStyleBackColor = true;
+      this.ClearFindStringBtn.Click += new System.EventHandler(this.ClearFindStringBtn_Click);
       // 
       // textBoxStringToFind
       // 
@@ -542,13 +576,15 @@
       // 
       this.dataGridViewProducts.AllowUserToAddRows = false;
       this.dataGridViewProducts.AllowUserToDeleteRows = false;
+      this.dataGridViewProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
       this.dataGridViewProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
       this.dataGridViewProducts.ContextMenuStrip = this.contextMenuStripProducts;
       this.dataGridViewProducts.Location = new System.Drawing.Point(218, 39);
       this.dataGridViewProducts.Name = "dataGridViewProducts";
+      this.dataGridViewProducts.ReadOnly = true;
       this.dataGridViewProducts.Size = new System.Drawing.Size(575, 365);
       this.dataGridViewProducts.TabIndex = 12;
-      this.dataGridViewProducts.DoubleClick += new System.EventHandler(this.dataGridViewProducts_DoubleClick);
+      this.dataGridViewProducts.DoubleClick += new System.EventHandler(this.OnEditProduct);
       // 
       // contextMenuStripProducts
       // 
@@ -585,18 +621,18 @@
       this.newProductToolStripMenuItem.Name = "newProductToolStripMenuItem";
       this.newProductToolStripMenuItem.Size = new System.Drawing.Size(268, 22);
       this.newProductToolStripMenuItem.Text = "Новый товар";
-      this.newProductToolStripMenuItem.Click += new System.EventHandler(this.newProductToolStripMenuItem_Click);
+      this.newProductToolStripMenuItem.Click += new System.EventHandler(this.OnNewProduct);
       // 
       // editProductToolStripMenuItem
       // 
       this.editProductToolStripMenuItem.Name = "editProductToolStripMenuItem";
       this.editProductToolStripMenuItem.Size = new System.Drawing.Size(268, 22);
       this.editProductToolStripMenuItem.Text = "Редактировать запись";
-      this.editProductToolStripMenuItem.Click += new System.EventHandler(this.dataGridViewProducts_DoubleClick);
+      this.editProductToolStripMenuItem.Click += new System.EventHandler(this.OnEditProduct);
       // 
       // textBoxQuantity
       // 
-      this.textBoxQuantity.Location = new System.Drawing.Point(97, 228);
+      this.textBoxQuantity.Location = new System.Drawing.Point(97, 276);
       this.textBoxQuantity.Name = "textBoxQuantity";
       this.textBoxQuantity.ReadOnly = true;
       this.textBoxQuantity.Size = new System.Drawing.Size(100, 20);
@@ -604,7 +640,7 @@
       // 
       // textBoxProducer
       // 
-      this.textBoxProducer.Location = new System.Drawing.Point(98, 187);
+      this.textBoxProducer.Location = new System.Drawing.Point(98, 241);
       this.textBoxProducer.Name = "textBoxProducer";
       this.textBoxProducer.ReadOnly = true;
       this.textBoxProducer.Size = new System.Drawing.Size(100, 20);
@@ -612,7 +648,7 @@
       // 
       // textBoxDepartment
       // 
-      this.textBoxDepartment.Location = new System.Drawing.Point(97, 154);
+      this.textBoxDepartment.Location = new System.Drawing.Point(97, 208);
       this.textBoxDepartment.Name = "textBoxDepartment";
       this.textBoxDepartment.ReadOnly = true;
       this.textBoxDepartment.Size = new System.Drawing.Size(100, 20);
@@ -620,16 +656,16 @@
       // 
       // textBoxPrice
       // 
-      this.textBoxPrice.Location = new System.Drawing.Point(97, 121);
+      this.textBoxPrice.Location = new System.Drawing.Point(98, 172);
       this.textBoxPrice.Name = "textBoxPrice";
       this.textBoxPrice.ReadOnly = true;
-      this.textBoxPrice.Size = new System.Drawing.Size(100, 20);
+      this.textBoxPrice.Size = new System.Drawing.Size(99, 20);
       this.textBoxPrice.TabIndex = 8;
       // 
       // labelQuantity
       // 
       this.labelQuantity.AutoSize = true;
-      this.labelQuantity.Location = new System.Drawing.Point(8, 222);
+      this.labelQuantity.Location = new System.Drawing.Point(8, 270);
       this.labelQuantity.Name = "labelQuantity";
       this.labelQuantity.Size = new System.Drawing.Size(66, 26);
       this.labelQuantity.TabIndex = 7;
@@ -638,7 +674,7 @@
       // labelProducer
       // 
       this.labelProducer.AutoSize = true;
-      this.labelProducer.Location = new System.Drawing.Point(8, 190);
+      this.labelProducer.Location = new System.Drawing.Point(8, 244);
       this.labelProducer.Name = "labelProducer";
       this.labelProducer.Size = new System.Drawing.Size(65, 13);
       this.labelProducer.TabIndex = 6;
@@ -647,7 +683,7 @@
       // labelDepartment
       // 
       this.labelDepartment.AutoSize = true;
-      this.labelDepartment.Location = new System.Drawing.Point(8, 157);
+      this.labelDepartment.Location = new System.Drawing.Point(8, 211);
       this.labelDepartment.Name = "labelDepartment";
       this.labelDepartment.Size = new System.Drawing.Size(38, 13);
       this.labelDepartment.TabIndex = 5;
@@ -656,7 +692,7 @@
       // labelPrice
       // 
       this.labelPrice.AutoSize = true;
-      this.labelPrice.Location = new System.Drawing.Point(8, 124);
+      this.labelPrice.Location = new System.Drawing.Point(9, 175);
       this.labelPrice.Name = "labelPrice";
       this.labelPrice.Size = new System.Drawing.Size(33, 13);
       this.labelPrice.TabIndex = 4;
@@ -664,7 +700,7 @@
       // 
       // textBoxTitle
       // 
-      this.textBoxTitle.Location = new System.Drawing.Point(97, 88);
+      this.textBoxTitle.Location = new System.Drawing.Point(97, 69);
       this.textBoxTitle.Name = "textBoxTitle";
       this.textBoxTitle.ReadOnly = true;
       this.textBoxTitle.Size = new System.Drawing.Size(100, 20);
@@ -673,7 +709,7 @@
       // labelTitle
       // 
       this.labelTitle.AutoSize = true;
-      this.labelTitle.Location = new System.Drawing.Point(8, 91);
+      this.labelTitle.Location = new System.Drawing.Point(8, 72);
       this.labelTitle.Name = "labelTitle";
       this.labelTitle.Size = new System.Drawing.Size(83, 13);
       this.labelTitle.TabIndex = 2;
@@ -681,7 +717,7 @@
       // 
       // textBoxID
       // 
-      this.textBoxID.Location = new System.Drawing.Point(97, 53);
+      this.textBoxID.Location = new System.Drawing.Point(97, 39);
       this.textBoxID.Name = "textBoxID";
       this.textBoxID.ReadOnly = true;
       this.textBoxID.Size = new System.Drawing.Size(100, 20);
@@ -690,7 +726,7 @@
       // labelID
       // 
       this.labelID.AutoSize = true;
-      this.labelID.Location = new System.Drawing.Point(8, 56);
+      this.labelID.Location = new System.Drawing.Point(8, 42);
       this.labelID.Name = "labelID";
       this.labelID.Size = new System.Drawing.Size(61, 13);
       this.labelID.TabIndex = 0;
@@ -698,13 +734,13 @@
       // 
       // Order
       // 
-      this.Order.Controls.Add(this.button5);
+      this.Order.Controls.Add(this.CanselOrderBtn);
       this.Order.Controls.Add(this.label37);
       this.Order.Controls.Add(this.groupBox11);
       this.Order.Controls.Add(this.numericUpDownProdQuantity);
       this.Order.Controls.Add(this.label43);
       this.Order.Controls.Add(this.comboBoxEmpl);
-      this.Order.Controls.Add(this.button20);
+      this.Order.Controls.Add(this.AddClientToOrder);
       this.Order.Controls.Add(this.comboBoxOrderCat);
       this.Order.Controls.Add(this.label24);
       this.Order.Controls.Add(this.textBoxAllSum);
@@ -730,15 +766,16 @@
       this.Order.Text = "Заказ";
       this.Order.UseVisualStyleBackColor = true;
       // 
-      // button5
+      // CanselOrderBtn
       // 
-      this.button5.Location = new System.Drawing.Point(133, 460);
-      this.button5.Name = "button5";
-      this.button5.Size = new System.Drawing.Size(112, 23);
-      this.button5.TabIndex = 35;
-      this.button5.Text = "Отменить заказ";
-      this.button5.UseVisualStyleBackColor = true;
-      this.button5.Click += new System.EventHandler(this.button5_Click);
+      this.CanselOrderBtn.Enabled = false;
+      this.CanselOrderBtn.Location = new System.Drawing.Point(133, 460);
+      this.CanselOrderBtn.Name = "CanselOrderBtn";
+      this.CanselOrderBtn.Size = new System.Drawing.Size(112, 23);
+      this.CanselOrderBtn.TabIndex = 35;
+      this.CanselOrderBtn.Text = "Отменить заказ";
+      this.CanselOrderBtn.UseVisualStyleBackColor = true;
+      this.CanselOrderBtn.Click += new System.EventHandler(this.CanselOrderBtn_Click);
       // 
       // label37
       // 
@@ -767,6 +804,7 @@
       // checkBoxDefaultAdress
       // 
       this.checkBoxDefaultAdress.AutoSize = true;
+      this.checkBoxDefaultAdress.Enabled = false;
       this.checkBoxDefaultAdress.Location = new System.Drawing.Point(68, 61);
       this.checkBoxDefaultAdress.Name = "checkBoxDefaultAdress";
       this.checkBoxDefaultAdress.Size = new System.Drawing.Size(177, 17);
@@ -774,6 +812,7 @@
       this.checkBoxDefaultAdress.Text = "Указанный в данных клиента";
       this.checkBoxDefaultAdress.UseVisualStyleBackColor = true;
       this.checkBoxDefaultAdress.CheckedChanged += new System.EventHandler(this.checkBoxDefaultAdress_CheckedChanged);
+      this.checkBoxDefaultAdress.Click += new System.EventHandler(this.checkBoxDefaultAdress_Click);
       // 
       // textBoxDeliverAdress
       // 
@@ -849,15 +888,15 @@
       this.comboBoxEmpl.Size = new System.Drawing.Size(161, 21);
       this.comboBoxEmpl.TabIndex = 30;
       // 
-      // button20
+      // AddClientToOrder
       // 
-      this.button20.Location = new System.Drawing.Point(410, 97);
-      this.button20.Name = "button20";
-      this.button20.Size = new System.Drawing.Size(92, 23);
-      this.button20.TabIndex = 26;
-      this.button20.Text = "Добавить";
-      this.button20.UseVisualStyleBackColor = true;
-      this.button20.Click += new System.EventHandler(this.button20_Click);
+      this.AddClientToOrder.Location = new System.Drawing.Point(294, 124);
+      this.AddClientToOrder.Name = "AddClientToOrder";
+      this.AddClientToOrder.Size = new System.Drawing.Size(92, 23);
+      this.AddClientToOrder.TabIndex = 26;
+      this.AddClientToOrder.Text = "Добавить";
+      this.AddClientToOrder.UseVisualStyleBackColor = true;
+      this.AddClientToOrder.Click += new System.EventHandler(this.AddClientToOrder_Click);
       // 
       // comboBoxOrderCat
       // 
@@ -868,7 +907,7 @@
             "Поставка"});
       this.comboBoxOrderCat.Location = new System.Drawing.Point(294, 36);
       this.comboBoxOrderCat.Name = "comboBoxOrderCat";
-      this.comboBoxOrderCat.Size = new System.Drawing.Size(208, 21);
+      this.comboBoxOrderCat.Size = new System.Drawing.Size(240, 21);
       this.comboBoxOrderCat.TabIndex = 25;
       this.comboBoxOrderCat.Text = "Выберите";
       // 
@@ -951,24 +990,34 @@
       // 
       this.dataGridViewProdsInOrder.AllowUserToAddRows = false;
       this.dataGridViewProdsInOrder.AllowUserToDeleteRows = false;
+      this.dataGridViewProdsInOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
       this.dataGridViewProdsInOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
       this.dataGridViewProdsInOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
+            this.ProductId,
             this.Title,
             this.Price,
-            this.PriceWithDiscount,
+            this.FinalPrice,
             this.Quantity,
             this.Sum});
+      this.dataGridViewProdsInOrder.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
       this.dataGridViewProdsInOrder.Location = new System.Drawing.Point(3, 168);
       this.dataGridViewProdsInOrder.Name = "dataGridViewProdsInOrder";
+      this.dataGridViewProdsInOrder.RightToLeft = System.Windows.Forms.RightToLeft.No;
       this.dataGridViewProdsInOrder.Size = new System.Drawing.Size(787, 232);
       this.dataGridViewProdsInOrder.TabIndex = 15;
       this.dataGridViewProdsInOrder.SelectionChanged += new System.EventHandler(this.dataGridViewProdsInOrder_SelectionChanged);
       // 
       // Id
       // 
-      this.Id.HeaderText = "Номер";
+      this.Id.HeaderText = "Column0";
       this.Id.Name = "Id";
+      this.Id.Visible = false;
+      // 
+      // ProductId
+      // 
+      this.ProductId.HeaderText = "Номер";
+      this.ProductId.Name = "ProductId";
       // 
       // Title
       // 
@@ -980,15 +1029,15 @@
       this.Price.HeaderText = "Цена";
       this.Price.Name = "Price";
       // 
-      // PriceWithDiscount
+      // FinalPrice
       // 
-      this.PriceWithDiscount.HeaderText = "Цена со скидкой";
-      this.PriceWithDiscount.Name = "PriceWithDiscount";
+      this.FinalPrice.HeaderText = "Окончательная цена";
+      this.FinalPrice.Name = "FinalPrice";
       // 
       // Quantity
       // 
-      dataGridViewCellStyle2.NullValue = "1";
-      this.Quantity.DefaultCellStyle = dataGridViewCellStyle2;
+      dataGridViewCellStyle1.NullValue = "1";
+      this.Quantity.DefaultCellStyle = dataGridViewCellStyle1;
       this.Quantity.HeaderText = "Количество";
       this.Quantity.Name = "Quantity";
       // 
@@ -1002,7 +1051,7 @@
       this.textBoxClient.Location = new System.Drawing.Point(294, 98);
       this.textBoxClient.Name = "textBoxClient";
       this.textBoxClient.ReadOnly = true;
-      this.textBoxClient.Size = new System.Drawing.Size(110, 20);
+      this.textBoxClient.Size = new System.Drawing.Size(240, 20);
       this.textBoxClient.TabIndex = 12;
       this.textBoxClient.TextChanged += new System.EventHandler(this.textBoxClient_TextChanged);
       // 
@@ -1035,9 +1084,9 @@
       this.label9.AutoSize = true;
       this.label9.Location = new System.Drawing.Point(8, 102);
       this.label9.Name = "label9";
-      this.label9.Size = new System.Drawing.Size(57, 13);
+      this.label9.Size = new System.Drawing.Size(55, 13);
       this.label9.TabIndex = 6;
-      this.label9.Text = "Продавец";
+      this.label9.Text = "Работник";
       // 
       // label6
       // 
@@ -1068,12 +1117,12 @@
       // 
       // Clients
       // 
-      this.Clients.Controls.Add(this.button23);
+      this.Clients.Controls.Add(this.ClientFindBtn);
       this.Clients.Controls.Add(this.groupBox14);
       this.Clients.Controls.Add(this.button21);
       this.Clients.Controls.Add(this.bindingNavigatorClients);
       this.Clients.Controls.Add(this.buttonBindToOrder);
-      this.Clients.Controls.Add(this.button15);
+      this.Clients.Controls.Add(this.NewClientBtn);
       this.Clients.Controls.Add(this.label23);
       this.Clients.Controls.Add(this.dataGridViewClients);
       this.Clients.Controls.Add(this.groupBox3);
@@ -1087,15 +1136,15 @@
       this.Clients.Text = "Клиенты";
       this.Clients.UseVisualStyleBackColor = true;
       // 
-      // button23
+      // ClientFindBtn
       // 
-      this.button23.Location = new System.Drawing.Point(649, 410);
-      this.button23.Name = "button23";
-      this.button23.Size = new System.Drawing.Size(127, 23);
-      this.button23.TabIndex = 21;
-      this.button23.Text = "Расширенный поиск";
-      this.button23.UseVisualStyleBackColor = true;
-      this.button23.Click += new System.EventHandler(this.button23_Click);
+      this.ClientFindBtn.Location = new System.Drawing.Point(649, 410);
+      this.ClientFindBtn.Name = "ClientFindBtn";
+      this.ClientFindBtn.Size = new System.Drawing.Size(127, 23);
+      this.ClientFindBtn.TabIndex = 21;
+      this.ClientFindBtn.Text = "Расширенный поиск";
+      this.ClientFindBtn.UseVisualStyleBackColor = true;
+      this.ClientFindBtn.Click += new System.EventHandler(this.ClientFindBtn_Click);
       // 
       // groupBox14
       // 
@@ -1262,7 +1311,7 @@
       // 
       // buttonBindToOrder
       // 
-      this.buttonBindToOrder.Location = new System.Drawing.Point(16, 369);
+      this.buttonBindToOrder.Location = new System.Drawing.Point(16, 398);
       this.buttonBindToOrder.Name = "buttonBindToOrder";
       this.buttonBindToOrder.Size = new System.Drawing.Size(209, 22);
       this.buttonBindToOrder.TabIndex = 15;
@@ -1270,15 +1319,15 @@
       this.buttonBindToOrder.UseVisualStyleBackColor = true;
       this.buttonBindToOrder.Click += new System.EventHandler(this.buttonBindToOrder_Click);
       // 
-      // button15
+      // NewClientBtn
       // 
-      this.button15.Location = new System.Drawing.Point(363, 397);
-      this.button15.Name = "button15";
-      this.button15.Size = new System.Drawing.Size(114, 23);
-      this.button15.TabIndex = 10;
-      this.button15.Text = "Новый клиент";
-      this.button15.UseVisualStyleBackColor = true;
-      this.button15.Click += new System.EventHandler(this.button15_Click);
+      this.NewClientBtn.Location = new System.Drawing.Point(363, 397);
+      this.NewClientBtn.Name = "NewClientBtn";
+      this.NewClientBtn.Size = new System.Drawing.Size(114, 23);
+      this.NewClientBtn.TabIndex = 10;
+      this.NewClientBtn.Text = "Новый клиент";
+      this.NewClientBtn.UseVisualStyleBackColor = true;
+      this.NewClientBtn.Click += new System.EventHandler(this.NewClientBtn_Click);
       // 
       // label23
       // 
@@ -1349,7 +1398,7 @@
       this.groupBox3.Controls.Add(this.labelPhone3);
       this.groupBox3.Controls.Add(this.labelPhone2);
       this.groupBox3.Controls.Add(this.labelPhone1);
-      this.groupBox3.Location = new System.Drawing.Point(16, 214);
+      this.groupBox3.Location = new System.Drawing.Point(16, 243);
       this.groupBox3.Name = "groupBox3";
       this.groupBox3.Size = new System.Drawing.Size(313, 149);
       this.groupBox3.TabIndex = 7;
@@ -1427,6 +1476,8 @@
       // 
       // groupBox2
       // 
+      this.groupBox2.Controls.Add(this.textBoxFirmName);
+      this.groupBox2.Controls.Add(this.labelFirmName);
       this.groupBox2.Controls.Add(this.textBoxDiscount);
       this.groupBox2.Controls.Add(this.textBoxSO);
       this.groupBox2.Controls.Add(this.textBoxMN);
@@ -1441,14 +1492,31 @@
       this.groupBox2.Controls.Add(this.label11);
       this.groupBox2.Location = new System.Drawing.Point(16, 28);
       this.groupBox2.Name = "groupBox2";
-      this.groupBox2.Size = new System.Drawing.Size(313, 180);
+      this.groupBox2.Size = new System.Drawing.Size(313, 209);
       this.groupBox2.TabIndex = 6;
       this.groupBox2.TabStop = false;
       this.groupBox2.Text = "Основная информация";
       // 
+      // textBoxFirmName
+      // 
+      this.textBoxFirmName.Location = new System.Drawing.Point(99, 124);
+      this.textBoxFirmName.Name = "textBoxFirmName";
+      this.textBoxFirmName.ReadOnly = true;
+      this.textBoxFirmName.Size = new System.Drawing.Size(192, 20);
+      this.textBoxFirmName.TabIndex = 13;
+      // 
+      // labelFirmName
+      // 
+      this.labelFirmName.AutoSize = true;
+      this.labelFirmName.Location = new System.Drawing.Point(7, 127);
+      this.labelFirmName.Name = "labelFirmName";
+      this.labelFirmName.Size = new System.Drawing.Size(44, 13);
+      this.labelFirmName.TabIndex = 12;
+      this.labelFirmName.Text = "Фирма";
+      // 
       // textBoxDiscount
       // 
-      this.textBoxDiscount.Location = new System.Drawing.Point(98, 150);
+      this.textBoxDiscount.Location = new System.Drawing.Point(98, 181);
       this.textBoxDiscount.Name = "textBoxDiscount";
       this.textBoxDiscount.ReadOnly = true;
       this.textBoxDiscount.Size = new System.Drawing.Size(192, 20);
@@ -1456,7 +1524,7 @@
       // 
       // textBoxSO
       // 
-      this.textBoxSO.Location = new System.Drawing.Point(98, 124);
+      this.textBoxSO.Location = new System.Drawing.Point(98, 155);
       this.textBoxSO.Name = "textBoxSO";
       this.textBoxSO.ReadOnly = true;
       this.textBoxSO.Size = new System.Drawing.Size(192, 20);
@@ -1497,7 +1565,7 @@
       // labelSO
       // 
       this.labelSO.AutoSize = true;
-      this.labelSO.Location = new System.Drawing.Point(6, 127);
+      this.labelSO.Location = new System.Drawing.Point(6, 158);
       this.labelSO.Name = "labelSO";
       this.labelSO.Size = new System.Drawing.Size(86, 13);
       this.labelSO.TabIndex = 5;
@@ -1506,7 +1574,7 @@
       // labelDiscount
       // 
       this.labelDiscount.AutoSize = true;
-      this.labelDiscount.Location = new System.Drawing.Point(6, 155);
+      this.labelDiscount.Location = new System.Drawing.Point(6, 186);
       this.labelDiscount.Name = "labelDiscount";
       this.labelDiscount.Size = new System.Drawing.Size(44, 13);
       this.labelDiscount.TabIndex = 4;
@@ -1609,226 +1677,6 @@
       this.labelSex.TabIndex = 0;
       this.labelSex.Text = "Пол";
       // 
-      // Claims
-      // 
-      this.Claims.Controls.Add(this.comboBox1);
-      this.Claims.Controls.Add(this.bindingNavigator1);
-      this.Claims.Controls.Add(this.dataGridView5);
-      this.Claims.Controls.Add(this.button14);
-      this.Claims.Controls.Add(this.textBox20);
-      this.Claims.Controls.Add(this.textBox19);
-      this.Claims.Controls.Add(this.textBox18);
-      this.Claims.Controls.Add(this.label36);
-      this.Claims.Controls.Add(this.dateTimePicker8);
-      this.Claims.Controls.Add(this.label35);
-      this.Claims.Controls.Add(this.label34);
-      this.Claims.Controls.Add(this.label33);
-      this.Claims.Controls.Add(this.label32);
-      this.Claims.Location = new System.Drawing.Point(4, 22);
-      this.Claims.Name = "Claims";
-      this.Claims.Padding = new System.Windows.Forms.Padding(3);
-      this.Claims.Size = new System.Drawing.Size(793, 493);
-      this.Claims.TabIndex = 5;
-      this.Claims.Text = "Жалобы";
-      this.Claims.UseVisualStyleBackColor = true;
-      // 
-      // comboBox1
-      // 
-      this.comboBox1.FormattingEnabled = true;
-      this.comboBox1.Items.AddRange(new object[] {
-            "неисправный товар",
-            "просроченный товар",
-            "испорченный (неправильное хранение, не понравился)",
-            "некачественное обслуживание"});
-      this.comboBox1.Location = new System.Drawing.Point(96, 134);
-      this.comboBox1.Name = "comboBox1";
-      this.comboBox1.Size = new System.Drawing.Size(121, 21);
-      this.comboBox1.TabIndex = 13;
-      // 
-      // bindingNavigator1
-      // 
-      this.bindingNavigator1.AddNewItem = null;
-      this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem1;
-      this.bindingNavigator1.DeleteItem = null;
-      this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem1,
-            this.bindingNavigatorMovePreviousItem1,
-            this.bindingNavigatorSeparator3,
-            this.bindingNavigatorPositionItem1,
-            this.bindingNavigatorCountItem1,
-            this.bindingNavigatorSeparator4,
-            this.bindingNavigatorMoveNextItem1,
-            this.bindingNavigatorMoveLastItem1,
-            this.bindingNavigatorSeparator5});
-      this.bindingNavigator1.Location = new System.Drawing.Point(3, 3);
-      this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
-      this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem1;
-      this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem1;
-      this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
-      this.bindingNavigator1.Name = "bindingNavigator1";
-      this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem1;
-      this.bindingNavigator1.Size = new System.Drawing.Size(787, 25);
-      this.bindingNavigator1.TabIndex = 12;
-      this.bindingNavigator1.Text = "bindingNavigator1";
-      // 
-      // bindingNavigatorCountItem1
-      // 
-      this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
-      this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(35, 22);
-      this.bindingNavigatorCountItem1.Text = "of {0}";
-      this.bindingNavigatorCountItem1.ToolTipText = "Total number of items";
-      // 
-      // bindingNavigatorMoveFirstItem1
-      // 
-      this.bindingNavigatorMoveFirstItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-      this.bindingNavigatorMoveFirstItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem1.Image")));
-      this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem1";
-      this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
-      this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(23, 22);
-      this.bindingNavigatorMoveFirstItem1.Text = "Move first";
-      // 
-      // bindingNavigatorMovePreviousItem1
-      // 
-      this.bindingNavigatorMovePreviousItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-      this.bindingNavigatorMovePreviousItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem1.Image")));
-      this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem1";
-      this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
-      this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(23, 22);
-      this.bindingNavigatorMovePreviousItem1.Text = "Move previous";
-      // 
-      // bindingNavigatorSeparator3
-      // 
-      this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator3";
-      this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 25);
-      // 
-      // bindingNavigatorPositionItem1
-      // 
-      this.bindingNavigatorPositionItem1.AccessibleName = "Position";
-      this.bindingNavigatorPositionItem1.AutoSize = false;
-      this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem1";
-      this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 22);
-      this.bindingNavigatorPositionItem1.Text = "0";
-      this.bindingNavigatorPositionItem1.ToolTipText = "Current position";
-      // 
-      // bindingNavigatorSeparator4
-      // 
-      this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator4";
-      this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 25);
-      // 
-      // bindingNavigatorMoveNextItem1
-      // 
-      this.bindingNavigatorMoveNextItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-      this.bindingNavigatorMoveNextItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem1.Image")));
-      this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem1";
-      this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
-      this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(23, 22);
-      this.bindingNavigatorMoveNextItem1.Text = "Move next";
-      // 
-      // bindingNavigatorMoveLastItem1
-      // 
-      this.bindingNavigatorMoveLastItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-      this.bindingNavigatorMoveLastItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem1.Image")));
-      this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem1";
-      this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
-      this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(23, 22);
-      this.bindingNavigatorMoveLastItem1.Text = "Move last";
-      // 
-      // bindingNavigatorSeparator5
-      // 
-      this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
-      this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 25);
-      // 
-      // dataGridView5
-      // 
-      this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.dataGridView5.Location = new System.Drawing.Point(8, 222);
-      this.dataGridView5.Name = "dataGridView5";
-      this.dataGridView5.Size = new System.Drawing.Size(777, 263);
-      this.dataGridView5.TabIndex = 11;
-      // 
-      // button14
-      // 
-      this.button14.Location = new System.Drawing.Point(206, 97);
-      this.button14.Name = "button14";
-      this.button14.Size = new System.Drawing.Size(88, 23);
-      this.button14.TabIndex = 10;
-      this.button14.Text = "Информация";
-      this.button14.UseVisualStyleBackColor = true;
-      // 
-      // textBox20
-      // 
-      this.textBox20.Location = new System.Drawing.Point(97, 100);
-      this.textBox20.Name = "textBox20";
-      this.textBox20.Size = new System.Drawing.Size(100, 20);
-      this.textBox20.TabIndex = 8;
-      // 
-      // textBox19
-      // 
-      this.textBox19.Location = new System.Drawing.Point(96, 31);
-      this.textBox19.Name = "textBox19";
-      this.textBox19.Size = new System.Drawing.Size(100, 20);
-      this.textBox19.TabIndex = 7;
-      // 
-      // textBox18
-      // 
-      this.textBox18.Location = new System.Drawing.Point(338, 31);
-      this.textBox18.Multiline = true;
-      this.textBox18.Name = "textBox18";
-      this.textBox18.Size = new System.Drawing.Size(447, 126);
-      this.textBox18.TabIndex = 6;
-      // 
-      // label36
-      // 
-      this.label36.AutoSize = true;
-      this.label36.Location = new System.Drawing.Point(11, 59);
-      this.label36.Name = "label36";
-      this.label36.Size = new System.Drawing.Size(71, 26);
-      this.label36.TabIndex = 5;
-      this.label36.Text = "Дата\r\nпоступления";
-      // 
-      // dateTimePicker8
-      // 
-      this.dateTimePicker8.Location = new System.Drawing.Point(96, 59);
-      this.dateTimePicker8.Name = "dateTimePicker8";
-      this.dateTimePicker8.Size = new System.Drawing.Size(133, 20);
-      this.dateTimePicker8.TabIndex = 4;
-      // 
-      // label35
-      // 
-      this.label35.AutoSize = true;
-      this.label35.Location = new System.Drawing.Point(255, 31);
-      this.label35.Name = "label35";
-      this.label35.Size = new System.Drawing.Size(70, 13);
-      this.label35.TabIndex = 3;
-      this.label35.Text = "Содержание";
-      // 
-      // label34
-      // 
-      this.label34.AutoSize = true;
-      this.label34.Location = new System.Drawing.Point(10, 137);
-      this.label34.Name = "label34";
-      this.label34.Size = new System.Drawing.Size(60, 13);
-      this.label34.TabIndex = 2;
-      this.label34.Text = "Категория";
-      // 
-      // label33
-      // 
-      this.label33.AutoSize = true;
-      this.label33.Location = new System.Drawing.Point(11, 102);
-      this.label33.Name = "label33";
-      this.label33.Size = new System.Drawing.Size(43, 13);
-      this.label33.TabIndex = 1;
-      this.label33.Text = "Клиент";
-      // 
-      // label32
-      // 
-      this.label32.AutoSize = true;
-      this.label32.Location = new System.Drawing.Point(9, 34);
-      this.label32.Name = "label32";
-      this.label32.Size = new System.Drawing.Size(61, 13);
-      this.label32.TabIndex = 0;
-      this.label32.Text = "Номер (ID)";
-      // 
       // Reports
       // 
       this.Reports.Controls.Add(this.splitContainer1);
@@ -1851,21 +1699,26 @@
       this.splitContainer1.Panel1.Controls.Add(this.groupBox13);
       this.splitContainer1.Panel1.Controls.Add(this.groupBox7);
       this.splitContainer1.Panel1.Controls.Add(this.groupBox4);
-      this.splitContainer1.Panel1.Controls.Add(this.groupBox6);
       this.splitContainer1.Panel1.Controls.Add(this.groupBox5);
+      this.splitContainer1.Panel1MinSize = 287;
+      // 
+      // splitContainer1.Panel2
+      // 
+      this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
+      this.splitContainer1.Panel2MinSize = 300;
       this.splitContainer1.Size = new System.Drawing.Size(793, 493);
       this.splitContainer1.SplitterDistance = 287;
       this.splitContainer1.TabIndex = 4;
       // 
       // groupBox13
       // 
-      this.groupBox13.Controls.Add(this.button16);
-      this.groupBox13.Controls.Add(this.comboBox7);
-      this.groupBox13.Controls.Add(this.comboBox6);
-      this.groupBox13.Controls.Add(this.dateTimePicker6);
+      this.groupBox13.Controls.Add(this.ShowRanksBtn);
+      this.groupBox13.Controls.Add(this.RanksCritCB);
+      this.groupBox13.Controls.Add(this.DepsCB);
+      this.groupBox13.Controls.Add(this.RanksEndDate);
       this.groupBox13.Controls.Add(this.label30);
       this.groupBox13.Controls.Add(this.label31);
-      this.groupBox13.Controls.Add(this.dateTimePicker7);
+      this.groupBox13.Controls.Add(this.RanksBeginDate);
       this.groupBox13.Location = new System.Drawing.Point(12, 302);
       this.groupBox13.Name = "groupBox13";
       this.groupBox13.Size = new System.Drawing.Size(261, 180);
@@ -1873,44 +1726,44 @@
       this.groupBox13.TabStop = false;
       this.groupBox13.Text = "Рейтинги продаж за период";
       // 
-      // button16
+      // ShowRanksBtn
       // 
-      this.button16.Location = new System.Drawing.Point(85, 137);
-      this.button16.Name = "button16";
-      this.button16.Size = new System.Drawing.Size(75, 23);
-      this.button16.TabIndex = 10;
-      this.button16.Text = "Показать";
-      this.button16.UseVisualStyleBackColor = true;
+      this.ShowRanksBtn.Location = new System.Drawing.Point(85, 137);
+      this.ShowRanksBtn.Name = "ShowRanksBtn";
+      this.ShowRanksBtn.Size = new System.Drawing.Size(75, 23);
+      this.ShowRanksBtn.TabIndex = 10;
+      this.ShowRanksBtn.Text = "Показать";
+      this.ShowRanksBtn.UseVisualStyleBackColor = true;
+      this.ShowRanksBtn.Click += new System.EventHandler(this.ShowRanksBtn_Click);
       // 
-      // comboBox7
+      // RanksCritCB
       // 
-      this.comboBox7.FormattingEnabled = true;
-      this.comboBox7.Items.AddRange(new object[] {
-            "самый продаваемый товар",
-            "самый невостребованный товар",
-            "графики роста/падения продаж за период",
+      this.RanksCritCB.FormattingEnabled = true;
+      this.RanksCritCB.Items.AddRange(new object[] {
+            "по товарам",
+            "графики роста/падения продаж",
             "рейтинги продаж"});
-      this.comboBox7.Location = new System.Drawing.Point(16, 110);
-      this.comboBox7.Name = "comboBox7";
-      this.comboBox7.Size = new System.Drawing.Size(210, 21);
-      this.comboBox7.TabIndex = 9;
-      this.comboBox7.Text = "Выберите критерий";
+      this.RanksCritCB.Location = new System.Drawing.Point(16, 110);
+      this.RanksCritCB.Name = "RanksCritCB";
+      this.RanksCritCB.Size = new System.Drawing.Size(210, 21);
+      this.RanksCritCB.TabIndex = 9;
+      this.RanksCritCB.Text = "Выберите критерий";
       // 
-      // comboBox6
+      // DepsCB
       // 
-      this.comboBox6.FormattingEnabled = true;
-      this.comboBox6.Location = new System.Drawing.Point(16, 83);
-      this.comboBox6.Name = "comboBox6";
-      this.comboBox6.Size = new System.Drawing.Size(212, 21);
-      this.comboBox6.TabIndex = 8;
-      this.comboBox6.Text = "Выберите отдел";
+      this.DepsCB.FormattingEnabled = true;
+      this.DepsCB.Location = new System.Drawing.Point(16, 83);
+      this.DepsCB.Name = "DepsCB";
+      this.DepsCB.Size = new System.Drawing.Size(212, 21);
+      this.DepsCB.TabIndex = 8;
+      this.DepsCB.Text = "Выберите отдел";
       // 
-      // dateTimePicker6
+      // RanksEndDate
       // 
-      this.dateTimePicker6.Location = new System.Drawing.Point(67, 57);
-      this.dateTimePicker6.Name = "dateTimePicker6";
-      this.dateTimePicker6.Size = new System.Drawing.Size(159, 20);
-      this.dateTimePicker6.TabIndex = 7;
+      this.RanksEndDate.Location = new System.Drawing.Point(67, 57);
+      this.RanksEndDate.Name = "RanksEndDate";
+      this.RanksEndDate.Size = new System.Drawing.Size(159, 20);
+      this.RanksEndDate.TabIndex = 7;
       // 
       // label30
       // 
@@ -1930,17 +1783,17 @@
       this.label31.TabIndex = 4;
       this.label31.Text = "Начало";
       // 
-      // dateTimePicker7
+      // RanksBeginDate
       // 
-      this.dateTimePicker7.Location = new System.Drawing.Point(68, 24);
-      this.dateTimePicker7.Name = "dateTimePicker7";
-      this.dateTimePicker7.Size = new System.Drawing.Size(158, 20);
-      this.dateTimePicker7.TabIndex = 5;
+      this.RanksBeginDate.Location = new System.Drawing.Point(68, 24);
+      this.RanksBeginDate.Name = "RanksBeginDate";
+      this.RanksBeginDate.Size = new System.Drawing.Size(158, 20);
+      this.RanksBeginDate.TabIndex = 5;
       // 
       // groupBox7
       // 
-      this.groupBox7.Controls.Add(this.button12);
-      this.groupBox7.Controls.Add(this.comboBox5);
+      this.groupBox7.Controls.Add(this.ShowSalesCB);
+      this.groupBox7.Controls.Add(this.SalesCriterCB);
       this.groupBox7.Location = new System.Drawing.Point(8, 248);
       this.groupBox7.Name = "groupBox7";
       this.groupBox7.Size = new System.Drawing.Size(264, 48);
@@ -1948,31 +1801,33 @@
       this.groupBox7.TabStop = false;
       this.groupBox7.Text = "Продажи";
       // 
-      // button12
+      // ShowSalesCB
       // 
-      this.button12.Location = new System.Drawing.Point(181, 17);
-      this.button12.Name = "button12";
-      this.button12.Size = new System.Drawing.Size(75, 23);
-      this.button12.TabIndex = 5;
-      this.button12.Text = "Показать";
-      this.button12.UseVisualStyleBackColor = true;
+      this.ShowSalesCB.Location = new System.Drawing.Point(181, 17);
+      this.ShowSalesCB.Name = "ShowSalesCB";
+      this.ShowSalesCB.Size = new System.Drawing.Size(75, 23);
+      this.ShowSalesCB.TabIndex = 5;
+      this.ShowSalesCB.Text = "Показать";
+      this.ShowSalesCB.UseVisualStyleBackColor = true;
+      this.ShowSalesCB.Click += new System.EventHandler(this.ShowSalesCB_Click);
       // 
-      // comboBox5
+      // SalesCriterCB
       // 
-      this.comboBox5.FormattingEnabled = true;
-      this.comboBox5.Items.AddRange(new object[] {
-            "по продавцам",
+      this.SalesCriterCB.FormattingEnabled = true;
+      this.SalesCriterCB.Items.AddRange(new object[] {
+            "по работникам",
+            "по отделам",
             "возвраты"});
-      this.comboBox5.Location = new System.Drawing.Point(5, 17);
-      this.comboBox5.Name = "comboBox5";
-      this.comboBox5.Size = new System.Drawing.Size(170, 21);
-      this.comboBox5.TabIndex = 4;
-      this.comboBox5.Text = "Выберите критерий";
+      this.SalesCriterCB.Location = new System.Drawing.Point(5, 17);
+      this.SalesCriterCB.Name = "SalesCriterCB";
+      this.SalesCriterCB.Size = new System.Drawing.Size(170, 21);
+      this.SalesCriterCB.TabIndex = 4;
+      this.SalesCriterCB.Text = "Выберите критерий";
       // 
       // groupBox4
       // 
-      this.groupBox4.Controls.Add(this.button9);
-      this.groupBox4.Controls.Add(this.comboBox3);
+      this.groupBox4.Controls.Add(this.ShowСostsNBenefitsBtn);
+      this.groupBox4.Controls.Add(this.СostsNBenefitsCriterCB);
       this.groupBox4.Location = new System.Drawing.Point(10, 9);
       this.groupBox4.Name = "groupBox4";
       this.groupBox4.Size = new System.Drawing.Size(264, 55);
@@ -1980,66 +1835,34 @@
       this.groupBox4.TabStop = false;
       this.groupBox4.Text = "Затраты и прибыль";
       // 
-      // button9
+      // ShowСostsNBenefitsBtn
       // 
-      this.button9.Location = new System.Drawing.Point(183, 19);
-      this.button9.Name = "button9";
-      this.button9.Size = new System.Drawing.Size(75, 23);
-      this.button9.TabIndex = 1;
-      this.button9.Text = "Показать";
-      this.button9.UseVisualStyleBackColor = true;
+      this.ShowСostsNBenefitsBtn.Location = new System.Drawing.Point(183, 19);
+      this.ShowСostsNBenefitsBtn.Name = "ShowСostsNBenefitsBtn";
+      this.ShowСostsNBenefitsBtn.Size = new System.Drawing.Size(75, 23);
+      this.ShowСostsNBenefitsBtn.TabIndex = 1;
+      this.ShowСostsNBenefitsBtn.Text = "Показать";
+      this.ShowСostsNBenefitsBtn.UseVisualStyleBackColor = true;
+      this.ShowСostsNBenefitsBtn.Click += new System.EventHandler(this.ShowСostsNBenefitsBtn_Click);
       // 
-      // comboBox3
+      // СostsNBenefitsCriterCB
       // 
-      this.comboBox3.FormattingEnabled = true;
-      this.comboBox3.Items.AddRange(new object[] {
+      this.СostsNBenefitsCriterCB.FormattingEnabled = true;
+      this.СostsNBenefitsCriterCB.Items.AddRange(new object[] {
             "по отделам",
-            "по поставкам"});
-      this.comboBox3.Location = new System.Drawing.Point(7, 19);
-      this.comboBox3.Name = "comboBox3";
-      this.comboBox3.Size = new System.Drawing.Size(170, 21);
-      this.comboBox3.TabIndex = 0;
-      this.comboBox3.Text = "Выберите критерий";
-      // 
-      // groupBox6
-      // 
-      this.groupBox6.Controls.Add(this.button11);
-      this.groupBox6.Controls.Add(this.comboBox4);
-      this.groupBox6.Location = new System.Drawing.Point(8, 186);
-      this.groupBox6.Name = "groupBox6";
-      this.groupBox6.Size = new System.Drawing.Size(265, 56);
-      this.groupBox6.TabIndex = 2;
-      this.groupBox6.TabStop = false;
-      this.groupBox6.Text = "Товар на складе";
-      // 
-      // button11
-      // 
-      this.button11.Location = new System.Drawing.Point(181, 21);
-      this.button11.Name = "button11";
-      this.button11.Size = new System.Drawing.Size(75, 23);
-      this.button11.TabIndex = 3;
-      this.button11.Text = "Показать";
-      this.button11.UseVisualStyleBackColor = true;
-      // 
-      // comboBox4
-      // 
-      this.comboBox4.FormattingEnabled = true;
-      this.comboBox4.Items.AddRange(new object[] {
-            "В наличии",
-            "Критически мало",
-            "Закончились"});
-      this.comboBox4.Location = new System.Drawing.Point(5, 21);
-      this.comboBox4.Name = "comboBox4";
-      this.comboBox4.Size = new System.Drawing.Size(170, 21);
-      this.comboBox4.TabIndex = 2;
-      this.comboBox4.Text = "Выберите критерий";
+            "по поставщикам"});
+      this.СostsNBenefitsCriterCB.Location = new System.Drawing.Point(7, 19);
+      this.СostsNBenefitsCriterCB.Name = "СostsNBenefitsCriterCB";
+      this.СostsNBenefitsCriterCB.Size = new System.Drawing.Size(170, 21);
+      this.СostsNBenefitsCriterCB.TabIndex = 0;
+      this.СostsNBenefitsCriterCB.Text = "Выберите критерий";
       // 
       // groupBox5
       // 
-      this.groupBox5.Controls.Add(this.button10);
-      this.groupBox5.Controls.Add(this.dateTimePicker5);
+      this.groupBox5.Controls.Add(this.ShowProfitBtn);
+      this.groupBox5.Controls.Add(this.ProfitEndDate);
       this.groupBox5.Controls.Add(this.label26);
-      this.groupBox5.Controls.Add(this.dateTimePicker4);
+      this.groupBox5.Controls.Add(this.ProfitBeginDate);
       this.groupBox5.Controls.Add(this.label25);
       this.groupBox5.Location = new System.Drawing.Point(8, 70);
       this.groupBox5.Name = "groupBox5";
@@ -2048,21 +1871,22 @@
       this.groupBox5.TabStop = false;
       this.groupBox5.Text = "Прибыль за период";
       // 
-      // button10
+      // ShowProfitBtn
       // 
-      this.button10.Location = new System.Drawing.Point(89, 78);
-      this.button10.Name = "button10";
-      this.button10.Size = new System.Drawing.Size(75, 23);
-      this.button10.TabIndex = 2;
-      this.button10.Text = "Показать";
-      this.button10.UseVisualStyleBackColor = true;
+      this.ShowProfitBtn.Location = new System.Drawing.Point(89, 78);
+      this.ShowProfitBtn.Name = "ShowProfitBtn";
+      this.ShowProfitBtn.Size = new System.Drawing.Size(75, 23);
+      this.ShowProfitBtn.TabIndex = 2;
+      this.ShowProfitBtn.Text = "Показать";
+      this.ShowProfitBtn.UseVisualStyleBackColor = true;
+      this.ShowProfitBtn.Click += new System.EventHandler(this.ShowProfitBtn_Click);
       // 
-      // dateTimePicker5
+      // ProfitEndDate
       // 
-      this.dateTimePicker5.Location = new System.Drawing.Point(74, 50);
-      this.dateTimePicker5.Name = "dateTimePicker5";
-      this.dateTimePicker5.Size = new System.Drawing.Size(159, 20);
-      this.dateTimePicker5.TabIndex = 3;
+      this.ProfitEndDate.Location = new System.Drawing.Point(74, 50);
+      this.ProfitEndDate.Name = "ProfitEndDate";
+      this.ProfitEndDate.Size = new System.Drawing.Size(159, 20);
+      this.ProfitEndDate.TabIndex = 3;
       // 
       // label26
       // 
@@ -2073,12 +1897,12 @@
       this.label26.TabIndex = 2;
       this.label26.Text = "Конец";
       // 
-      // dateTimePicker4
+      // ProfitBeginDate
       // 
-      this.dateTimePicker4.Location = new System.Drawing.Point(75, 17);
-      this.dateTimePicker4.Name = "dateTimePicker4";
-      this.dateTimePicker4.Size = new System.Drawing.Size(158, 20);
-      this.dateTimePicker4.TabIndex = 1;
+      this.ProfitBeginDate.Location = new System.Drawing.Point(75, 17);
+      this.ProfitBeginDate.Name = "ProfitBeginDate";
+      this.ProfitBeginDate.Size = new System.Drawing.Size(158, 20);
+      this.ProfitBeginDate.TabIndex = 1;
       // 
       // label25
       // 
@@ -2128,11 +1952,11 @@
             this.newDepToolStripMenuItem,
             this.newEmpToolStripMenuItem1,
             this.toolStripSeparator3,
-            this.toolStripMenuItem6,
-            this.toolStripMenuItem7,
+            this.editDepToolStripMenuItem,
+            this.delDepToolStripMenuItem,
             this.toolStripSeparator4,
-            this.toolStripMenuItem5,
-            this.удалитьРаботникаToolStripMenuItem});
+            this.editEmpltoolStripMenuItem,
+            this.delEmplToolStripMenuItem});
       this.contextMenuStripDepEmpl.Name = "contextMenuStripDepEmpl";
       this.contextMenuStripDepEmpl.Size = new System.Drawing.Size(216, 148);
       // 
@@ -2155,43 +1979,43 @@
       this.toolStripSeparator3.Name = "toolStripSeparator3";
       this.toolStripSeparator3.Size = new System.Drawing.Size(212, 6);
       // 
-      // toolStripMenuItem6
+      // editDepToolStripMenuItem
       // 
-      this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-      this.toolStripMenuItem6.Size = new System.Drawing.Size(215, 22);
-      this.toolStripMenuItem6.Text = "Редактировать отдел";
-      this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
+      this.editDepToolStripMenuItem.Name = "editDepToolStripMenuItem";
+      this.editDepToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+      this.editDepToolStripMenuItem.Text = "Редактировать отдел";
+      this.editDepToolStripMenuItem.Click += new System.EventHandler(this.editDepToolStripMenuItem_Click);
       // 
-      // toolStripMenuItem7
+      // delDepToolStripMenuItem
       // 
-      this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-      this.toolStripMenuItem7.Size = new System.Drawing.Size(215, 22);
-      this.toolStripMenuItem7.Text = "Удалить отдел";
-      this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
+      this.delDepToolStripMenuItem.Name = "delDepToolStripMenuItem";
+      this.delDepToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+      this.delDepToolStripMenuItem.Text = "Удалить отдел";
+      this.delDepToolStripMenuItem.Click += new System.EventHandler(this.delDepToolStripMenuItem_Click);
       // 
       // toolStripSeparator4
       // 
       this.toolStripSeparator4.Name = "toolStripSeparator4";
       this.toolStripSeparator4.Size = new System.Drawing.Size(212, 6);
       // 
-      // toolStripMenuItem5
+      // editEmpltoolStripMenuItem
       // 
-      this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-      this.toolStripMenuItem5.Size = new System.Drawing.Size(215, 22);
-      this.toolStripMenuItem5.Text = "Редактировать работника";
-      this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
+      this.editEmpltoolStripMenuItem.Name = "editEmpltoolStripMenuItem";
+      this.editEmpltoolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+      this.editEmpltoolStripMenuItem.Text = "Редактировать работника";
+      this.editEmpltoolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
       // 
-      // удалитьРаботникаToolStripMenuItem
+      // delEmplToolStripMenuItem
       // 
-      this.удалитьРаботникаToolStripMenuItem.Name = "удалитьРаботникаToolStripMenuItem";
-      this.удалитьРаботникаToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
-      this.удалитьРаботникаToolStripMenuItem.Text = "Удалить работника";
+      this.delEmplToolStripMenuItem.Name = "delEmplToolStripMenuItem";
+      this.delEmplToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+      this.delEmplToolStripMenuItem.Text = "Удалить работника";
       // 
       // groupBox10
       // 
-      this.groupBox10.Controls.Add(this.button4);
-      this.groupBox10.Controls.Add(this.button22);
-      this.groupBox10.Controls.Add(this.button18);
+      this.groupBox10.Controls.Add(this.UserDelBtn);
+      this.groupBox10.Controls.Add(this.NewUserBtn);
+      this.groupBox10.Controls.Add(this.UserEditBtn);
       this.groupBox10.Controls.Add(this.dataGridViewUsers);
       this.groupBox10.Location = new System.Drawing.Point(17, 250);
       this.groupBox10.Name = "groupBox10";
@@ -2200,35 +2024,35 @@
       this.groupBox10.TabStop = false;
       this.groupBox10.Text = "Пользователи";
       // 
-      // button4
+      // UserDelBtn
       // 
-      this.button4.Location = new System.Drawing.Point(177, 209);
-      this.button4.Name = "button4";
-      this.button4.Size = new System.Drawing.Size(75, 23);
-      this.button4.TabIndex = 4;
-      this.button4.Text = " Удалить";
-      this.button4.UseVisualStyleBackColor = true;
-      this.button4.Click += new System.EventHandler(this.button4_Click);
+      this.UserDelBtn.Location = new System.Drawing.Point(177, 209);
+      this.UserDelBtn.Name = "UserDelBtn";
+      this.UserDelBtn.Size = new System.Drawing.Size(75, 23);
+      this.UserDelBtn.TabIndex = 4;
+      this.UserDelBtn.Text = " Удалить";
+      this.UserDelBtn.UseVisualStyleBackColor = true;
+      this.UserDelBtn.Click += new System.EventHandler(this.UserDelBtn_Click);
       // 
-      // button22
+      // NewUserBtn
       // 
-      this.button22.Location = new System.Drawing.Point(6, 209);
-      this.button22.Name = "button22";
-      this.button22.Size = new System.Drawing.Size(75, 23);
-      this.button22.TabIndex = 3;
-      this.button22.Text = "Новый";
-      this.button22.UseVisualStyleBackColor = true;
-      this.button22.Click += new System.EventHandler(this.button22_Click);
+      this.NewUserBtn.Location = new System.Drawing.Point(6, 209);
+      this.NewUserBtn.Name = "NewUserBtn";
+      this.NewUserBtn.Size = new System.Drawing.Size(75, 23);
+      this.NewUserBtn.TabIndex = 3;
+      this.NewUserBtn.Text = "Новый";
+      this.NewUserBtn.UseVisualStyleBackColor = true;
+      this.NewUserBtn.Click += new System.EventHandler(this.NewUserBtn_Click);
       // 
-      // button18
+      // UserEditBtn
       // 
-      this.button18.Location = new System.Drawing.Point(87, 209);
-      this.button18.Name = "button18";
-      this.button18.Size = new System.Drawing.Size(75, 23);
-      this.button18.TabIndex = 2;
-      this.button18.Text = "Изменить";
-      this.button18.UseVisualStyleBackColor = true;
-      this.button18.Click += new System.EventHandler(this.button18_Click);
+      this.UserEditBtn.Location = new System.Drawing.Point(87, 209);
+      this.UserEditBtn.Name = "UserEditBtn";
+      this.UserEditBtn.Size = new System.Drawing.Size(75, 23);
+      this.UserEditBtn.TabIndex = 2;
+      this.UserEditBtn.Text = "Изменить";
+      this.UserEditBtn.UseVisualStyleBackColor = true;
+      this.UserEditBtn.Click += new System.EventHandler(this.UserEditBtn_Click);
       // 
       // dataGridViewUsers
       // 
@@ -2242,9 +2066,9 @@
       // 
       // groupBox9
       // 
-      this.groupBox9.Controls.Add(this.button3);
-      this.groupBox9.Controls.Add(this.button17);
-      this.groupBox9.Controls.Add(this.button13);
+      this.groupBox9.Controls.Add(this.PositionDelBtn);
+      this.groupBox9.Controls.Add(this.ChangePositionBtn);
+      this.groupBox9.Controls.Add(this.newPositionBtn);
       this.groupBox9.Controls.Add(this.dataGridViewRoles);
       this.groupBox9.Location = new System.Drawing.Point(17, 6);
       this.groupBox9.Name = "groupBox9";
@@ -2253,35 +2077,35 @@
       this.groupBox9.TabStop = false;
       this.groupBox9.Text = "Должности (Роли)";
       // 
-      // button3
+      // PositionDelBtn
       // 
-      this.button3.Location = new System.Drawing.Point(177, 209);
-      this.button3.Name = "button3";
-      this.button3.Size = new System.Drawing.Size(75, 23);
-      this.button3.TabIndex = 3;
-      this.button3.Text = " Удалить";
-      this.button3.UseVisualStyleBackColor = true;
-      this.button3.Click += new System.EventHandler(this.button3_Click);
+      this.PositionDelBtn.Location = new System.Drawing.Point(177, 209);
+      this.PositionDelBtn.Name = "PositionDelBtn";
+      this.PositionDelBtn.Size = new System.Drawing.Size(75, 23);
+      this.PositionDelBtn.TabIndex = 3;
+      this.PositionDelBtn.Text = " Удалить";
+      this.PositionDelBtn.UseVisualStyleBackColor = true;
+      this.PositionDelBtn.Click += new System.EventHandler(this.PositionDelBtn_Click);
       // 
-      // button17
+      // ChangePositionBtn
       // 
-      this.button17.Location = new System.Drawing.Point(87, 209);
-      this.button17.Name = "button17";
-      this.button17.Size = new System.Drawing.Size(75, 23);
-      this.button17.TabIndex = 2;
-      this.button17.Text = "Изменить";
-      this.button17.UseVisualStyleBackColor = true;
-      this.button17.Click += new System.EventHandler(this.button17_Click);
+      this.ChangePositionBtn.Location = new System.Drawing.Point(87, 209);
+      this.ChangePositionBtn.Name = "ChangePositionBtn";
+      this.ChangePositionBtn.Size = new System.Drawing.Size(75, 23);
+      this.ChangePositionBtn.TabIndex = 2;
+      this.ChangePositionBtn.Text = "Изменить";
+      this.ChangePositionBtn.UseVisualStyleBackColor = true;
+      this.ChangePositionBtn.Click += new System.EventHandler(this.ChangePositionBtn_Click);
       // 
-      // button13
+      // newPositionBtn
       // 
-      this.button13.Location = new System.Drawing.Point(6, 209);
-      this.button13.Name = "button13";
-      this.button13.Size = new System.Drawing.Size(75, 23);
-      this.button13.TabIndex = 1;
-      this.button13.Text = "Новая";
-      this.button13.UseVisualStyleBackColor = true;
-      this.button13.Click += new System.EventHandler(this.button13_Click);
+      this.newPositionBtn.Location = new System.Drawing.Point(6, 209);
+      this.newPositionBtn.Name = "newPositionBtn";
+      this.newPositionBtn.Size = new System.Drawing.Size(75, 23);
+      this.newPositionBtn.TabIndex = 1;
+      this.newPositionBtn.Text = "Новая";
+      this.newPositionBtn.UseVisualStyleBackColor = true;
+      this.newPositionBtn.Click += new System.EventHandler(this.newPositionBtn_Click);
       // 
       // dataGridViewRoles
       // 
@@ -2314,6 +2138,8 @@
       this.tabControlMain.ResumeLayout(false);
       this.Products.ResumeLayout(false);
       this.Products.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.MarkupNumericUpDown)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.PurchasePriceNumericUpDown)).EndInit();
       this.groupBox8.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorProducts)).EndInit();
       this.bindingNavigatorProducts.ResumeLayout(false);
@@ -2343,12 +2169,6 @@
       this.groupBox2.PerformLayout();
       this.groupBox1.ResumeLayout(false);
       this.groupBox1.PerformLayout();
-      this.Claims.ResumeLayout(false);
-      this.Claims.PerformLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-      this.bindingNavigator1.ResumeLayout(false);
-      this.bindingNavigator1.PerformLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
       this.Reports.ResumeLayout(false);
       this.splitContainer1.Panel1.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -2357,7 +2177,6 @@
       this.groupBox13.PerformLayout();
       this.groupBox7.ResumeLayout(false);
       this.groupBox4.ResumeLayout(false);
-      this.groupBox6.ResumeLayout(false);
       this.groupBox5.ResumeLayout(false);
       this.groupBox5.PerformLayout();
       this.Management.ResumeLayout(false);
@@ -2392,7 +2211,7 @@
     private System.Windows.Forms.Label labelTitle;
     private System.Windows.Forms.TextBox textBoxID;
     private System.Windows.Forms.Label labelID;
-    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.Button AddSelectedProdsInOrder;
     private System.Windows.Forms.GroupBox groupBoxFind;
     private System.Windows.Forms.ComboBox comboBoxCriteriaFilterProduct;
     private System.Windows.Forms.Label label1;
@@ -2408,7 +2227,7 @@
     private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
     private System.Windows.Forms.TextBox textBoxStringToFind;
     private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.Button button2;
+    private System.Windows.Forms.Button ClearFindStringBtn;
     private System.Windows.Forms.Label label8;
     private System.Windows.Forms.Label label6;
     private System.Windows.Forms.Label label5;
@@ -2451,70 +2270,45 @@
     private System.Windows.Forms.ComboBox comboBoxOrderCat;
     private System.Windows.Forms.Label label24;
     private System.Windows.Forms.GroupBox groupBox5;
-    private System.Windows.Forms.Button button10;
-    private System.Windows.Forms.DateTimePicker dateTimePicker5;
+    private System.Windows.Forms.Button ShowProfitBtn;
+    private System.Windows.Forms.DateTimePicker ProfitEndDate;
     private System.Windows.Forms.Label label26;
-    private System.Windows.Forms.DateTimePicker dateTimePicker4;
+    private System.Windows.Forms.DateTimePicker ProfitBeginDate;
     private System.Windows.Forms.Label label25;
     private System.Windows.Forms.GroupBox groupBox4;
-    private System.Windows.Forms.Button button9;
-    private System.Windows.Forms.ComboBox comboBox3;
-    private System.Windows.Forms.GroupBox groupBox6;
-    private System.Windows.Forms.Button button11;
-    private System.Windows.Forms.ComboBox comboBox4;
+    private System.Windows.Forms.Button ShowСostsNBenefitsBtn;
+    private System.Windows.Forms.ComboBox СostsNBenefitsCriterCB;
     private System.Windows.Forms.GroupBox groupBox7;
-    private System.Windows.Forms.Button button12;
-    private System.Windows.Forms.ComboBox comboBox5;
+    private System.Windows.Forms.Button ShowSalesCB;
+    private System.Windows.Forms.ComboBox SalesCriterCB;
     private System.Windows.Forms.GroupBox groupBox8;
     private System.Windows.Forms.Label label29;
     private System.Windows.Forms.SplitContainer splitContainer1;
     private System.Windows.Forms.GroupBox groupBox9;
     private System.Windows.Forms.DataGridView dataGridViewRoles;
-    private System.Windows.Forms.Button button13;
+    private System.Windows.Forms.Button newPositionBtn;
     private System.Windows.Forms.GroupBox groupBox12;
     private System.Windows.Forms.GroupBox groupBox10;
     private System.Windows.Forms.DataGridView dataGridViewUsers;
-    private System.Windows.Forms.Button button15;
+    private System.Windows.Forms.Button NewClientBtn;
     private System.Windows.Forms.GroupBox groupBox13;
-    private System.Windows.Forms.Button button16;
-    private System.Windows.Forms.ComboBox comboBox7;
-    private System.Windows.Forms.ComboBox comboBox6;
-    private System.Windows.Forms.DateTimePicker dateTimePicker6;
+    private System.Windows.Forms.Button ShowRanksBtn;
+    private System.Windows.Forms.ComboBox RanksCritCB;
+    private System.Windows.Forms.ComboBox DepsCB;
+    private System.Windows.Forms.DateTimePicker RanksEndDate;
     private System.Windows.Forms.Label label30;
     private System.Windows.Forms.Label label31;
-    private System.Windows.Forms.DateTimePicker dateTimePicker7;
-    private System.Windows.Forms.Button button18;
-    private System.Windows.Forms.Button button17;
+    private System.Windows.Forms.DateTimePicker RanksBeginDate;
+    private System.Windows.Forms.Button UserEditBtn;
+    private System.Windows.Forms.Button ChangePositionBtn;
     private System.Windows.Forms.TreeView treeViewDepEmpl;
-    private System.Windows.Forms.TabPage Claims;
-    private System.Windows.Forms.Button button14;
-    private System.Windows.Forms.TextBox textBox20;
-    private System.Windows.Forms.TextBox textBox19;
-    private System.Windows.Forms.TextBox textBox18;
-    private System.Windows.Forms.Label label36;
-    private System.Windows.Forms.DateTimePicker dateTimePicker8;
-    private System.Windows.Forms.Label label35;
-    private System.Windows.Forms.Label label34;
-    private System.Windows.Forms.Label label33;
-    private System.Windows.Forms.Label label32;
-    private System.Windows.Forms.Button button19;
-    private System.Windows.Forms.DataGridView dataGridView5;
-    private System.Windows.Forms.BindingNavigator bindingNavigator1;
-    private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem1;
-    private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem1;
-    private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem1;
-    private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator3;
-    private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem1;
-    private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator4;
-    private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem1;
-    private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem1;
-    private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator5;
+    private System.Windows.Forms.Button NewProductBtn;
     private System.Windows.Forms.ContextMenuStrip contextMenuStripDepEmpl;
     private System.Windows.Forms.ToolStripMenuItem newDepToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem newEmpToolStripMenuItem1;
-    private System.Windows.Forms.Button button20;
+    private System.Windows.Forms.Button AddClientToOrder;
     private System.Windows.Forms.CheckBox checkBoxDefaultAdress;
-    private System.Windows.Forms.Button button22;
+    private System.Windows.Forms.Button NewUserBtn;
     private System.Windows.Forms.ContextMenuStrip contextMenuStripProducts;
     private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     private System.Windows.Forms.ToolStripMenuItem resetFilterToolStripMenuItem;
@@ -2554,7 +2348,7 @@
     private System.Windows.Forms.ToolTip toolTip1;
     private System.Windows.Forms.Label label37;
     private System.Windows.Forms.ToolStripMenuItem newProductToolStripMenuItem;
-    private System.Windows.Forms.Button button8;
+    private System.Windows.Forms.Button EditProductBtn;
     private System.Windows.Forms.Button button21;
     private System.Windows.Forms.GroupBox groupBox14;
     private System.Windows.Forms.Button buttonClearCrit;
@@ -2562,24 +2356,30 @@
     private System.Windows.Forms.Label labelFirst;
     private System.Windows.Forms.ComboBox cbCritToFindClient;
     private System.Windows.Forms.Label label39;
-    private System.Windows.Forms.Button button23;
-    private System.Windows.Forms.Button button24;
+    private System.Windows.Forms.Button ClientFindBtn;
+    private System.Windows.Forms.Button UserDelBtn;
+    private System.Windows.Forms.Button PositionDelBtn;
+    private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+    private System.Windows.Forms.ToolStripMenuItem editEmpltoolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem delEmplToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem editDepToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem delDepToolStripMenuItem;
+    private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+    private System.Windows.Forms.Button CanselOrderBtn;
+    private System.Windows.Forms.TextBox textBoxFirmName;
+    private System.Windows.Forms.Label labelFirmName;
+    private System.Windows.Forms.NumericUpDown MarkupNumericUpDown;
+    private System.Windows.Forms.NumericUpDown PurchasePriceNumericUpDown;
+    private System.Windows.Forms.Label label12;
+    private System.Windows.Forms.Label label13;
+    private System.Windows.Forms.Button DelProductBtn;
     private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+    private System.Windows.Forms.DataGridViewTextBoxColumn ProductId;
     private System.Windows.Forms.DataGridViewTextBoxColumn Title;
     private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-    private System.Windows.Forms.DataGridViewTextBoxColumn PriceWithDiscount;
+    private System.Windows.Forms.DataGridViewTextBoxColumn FinalPrice;
     private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
     private System.Windows.Forms.DataGridViewTextBoxColumn Sum;
-    private System.Windows.Forms.ComboBox comboBox1;
-    private System.Windows.Forms.Button button4;
-    private System.Windows.Forms.Button button3;
-    private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-    private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-    private System.Windows.Forms.ToolStripMenuItem удалитьРаботникаToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
-    private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
-    private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-    private System.Windows.Forms.Button button5;
   }
 }
 

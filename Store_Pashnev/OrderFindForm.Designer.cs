@@ -230,6 +230,7 @@
       this.btnExit.TabIndex = 48;
       this.btnExit.Text = "Выйти";
       this.btnExit.UseVisualStyleBackColor = true;
+      this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
       // 
       // label10
       // 

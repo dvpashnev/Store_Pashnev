@@ -7,22 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Store_WSL;
 
 namespace Store_Pashnev
 {
   public partial class DepartmentForm : Form
   {
-    private int _depId;
+    public Department dep;
 
-    public DepartmentForm(int depId)
+    public DepartmentForm(Department department)
     {
       InitializeComponent();
-      _depId = depId;
+      dep = department;
     }
 
     private void button1_Click(object sender, EventArgs e)
     {
-      Department.SetValues(
+      dep.SetValues(
         Convert.ToInt32(textBoxId.Text),
         textBoxName.Text
         );
@@ -31,14 +32,15 @@ namespace Store_Pashnev
 
     private void button2_Click(object sender, EventArgs e)
     {
-      Department.Clear();
+      dep.Clear();
       Close();
     }
 
     private void DepartmentForm_Load(object sender, EventArgs e)
     {
-      textBoxId.Text = _depId.ToString();
-      textBoxName.Text = Department.Name;
+      textBoxId.Text = dep.Id.ToString();
+      textBoxId.ReadOnly = true;
+      textBoxName.Text = dep.Name;
     }
   }
 }

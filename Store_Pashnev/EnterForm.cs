@@ -1,52 +1,47 @@
 ﻿using System;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
 using System.Windows.Forms;
+using Store_Pashnev.ServiceReference1;
+using Store_WSL;
 
 namespace Store_Pashnev
 {
   public partial class EnterForm : Form
   {
-    public EnterForm()
+    private StoreServiceClient _client;
+
+    public User user = new User();
+
+    public EnterForm(StoreServiceClient client)
     {
       InitializeComponent();
+      _client = client;
     }
 
     private void button1_Click(object sender, EventArgs e)
     {
-      using (SqlConnection connect = new SqlConnection(ConfigurationManager.ConnectionStrings["Store"].ConnectionString)) // создание объекта подключения
+      int res = _client.GetUserId(tbNick.Text, tbPassword.Text);
+
+      switch (res)
       {
-        connect.Open();
-        SqlCommand command = new SqlCommand();
-        command.Connection = connect;
-        SqlParameter nick = new SqlParameter();
-        nick.ParameterName = "@Nick";
-        nick.Direction = ParameterDirection.Input;
-        nick.Value = tbNick.Text;
-        command.Parameters.Add(nick);
-
-        SqlParameter password = new SqlParameter();
-        password.ParameterName = "@Password";
-        password.Direction = ParameterDirection.Input;
-        password.Value = tbPassword.Text;
-        command.Parameters.Add(password);
-
-        command.CommandText = "select Id from [User] where Nick = @Nick and Password = @Password";
-
-        EnterData.UserID = Convert.ToInt32(command.ExecuteScalar());
-      }
-
-      if (EnterData.UserID == 0)
-      {
-        MessageBox.Show(@"Такого пользователя нет. Попробуйте ещё раз");
-        tbNick.Text = "";
-        tbPassword.Text = "";
-        tbNick.Focus();
-      }
-      else
-      {
-        Close();
+        case 0:
+          {
+            MessageBox.Show(@"Такого пользователя нет. Попробуйте ещё раз");
+            tbNick.Text = "";
+            tbPassword.Text = "";
+            tbNick.Focus();
+          }
+          break;
+        case -1:
+          {
+            MessageBox.Show(@"Пароль неверный. Попробуйте ещё раз");
+            tbPassword.Text = "";
+            tbPassword.Focus();
+          }
+          break;
+        default:
+          user.SetId(res);
+          Close();
+          break;
       }
     }
 

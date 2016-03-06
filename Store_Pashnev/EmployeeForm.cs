@@ -8,32 +8,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Store_WSL;
+using Store_Pashnev.ServiceReference1;
 
 namespace Store_Pashnev
 {
   public partial class EmployeeForm : Form
   {
-    private int _emplId;
     private int _department;
     private DataTable _deps;
     private DataTable _roles;
     private DataTable _users;
-    private string _connectString;
 
-    public EmployeeForm(int emplId, int department, DataTable deps, DataTable roles, DataTable users, string connectString)
+    private StoreServiceClient _client;
+
+    public User user = new User();
+
+    public Employee employee = new Employee();
+
+    public EmployeeForm(Employee empl, int department, DataTable deps, DataTable roles, DataTable users, StoreServiceClient client)
     {
       InitializeComponent();
-      _emplId = emplId;
+      employee = empl;
       _department = department;
       _deps = deps;
       _roles = roles;
       _users = users;
-      _connectString = connectString;
+      _client = client;
     }
 
     private void EmployeeForm_Load(object sender, EventArgs e)
     {
-      textBoxId.Text = _emplId.ToString();
+      textBoxId.Text = employee.Id.ToString();
+      textBoxId.ReadOnly = true;
 
       comboBoxDep.DataSource = _deps;
       comboBoxDep.DisplayMember = "Name";
@@ -41,41 +48,36 @@ namespace Store_Pashnev
 
       comboBoxDep.SelectedIndex = _department - 1;
 
-      if (Employee.LastName != null)
+      if (employee.LastName != null)
       {
-        textBoxLN.Text = Employee.LastName;
-        textBoxFN.Text = Employee.FirstName;
-        textBoxMN.Text = Employee.MiddleName;
-        textBoxUserID.Text = Employee.UserId.ToString();
-        dateTimePickerAccept.Value = Employee.AcceptanceDate;
-        textBoxSO.Text = Employee.SumOrders.ToString();
-        textBoxBonuses.Text = Employee.Bonuses.ToString();
+        textBoxLN.Text = employee.LastName;
+        textBoxFN.Text = employee.FirstName;
+        textBoxMN.Text = employee.MiddleName;
+        textBoxUserID.Text = employee.UserId.ToString();
+        dateTimePickerAccept.Value = employee.AcceptanceDate;
+        textBoxSO.Text = employee.SumOrders.ToString();
+        textBoxBonuses.Text = employee.Bonuses.ToString();
       }
     }
 
     private void button5_Click(object sender, EventArgs e)
     {
-      using (SqlConnection connect = new SqlConnection(_connectString))
-      {
-        SqlCommand command = new SqlCommand();
-        connect.Open();
-        command.Connection = connect;
-        command.CommandText = String.Format("select ident_current('User')");
-        User.SetId(Convert.ToInt32(command.ExecuteScalar()) + 1);
-      }
+      user.SetId(_client.GetCurIdentity("User") + 1);
 
-      UserForm uf = new UserForm(User.Id, _roles, _users);
+      UserForm uf = new UserForm(user, _roles, _users);
       uf.ShowDialog();
 
-      if (User.Id != 0)
+      user = uf.user;
+
+      if (user.Id != 0)
       {
-        textBoxUserID.Text = User.Id.ToString();
+        textBoxUserID.Text = user.Id.ToString();
       }
     }
 
     private void buttonSave_Click(object sender, EventArgs e)
     {
-      Employee.SetValues(
+      employee.SetValues(
         Convert.ToInt32(textBoxId.Text),
         textBoxLN.Text,
         textBoxFN.Text,
@@ -91,7 +93,7 @@ namespace Store_Pashnev
 
     private void EmployeeForm_FormClosing(object sender, FormClosingEventArgs e)
     {
-      if (Employee.Id !=0 && textBoxUserID.Text == "")
+      if (employee.Id !=0 && textBoxUserID.Text == "")
       {
         MessageBox.Show(@"Вы не создали пользователя для работника");
         textBoxUserID.Focus();
@@ -101,8 +103,8 @@ namespace Store_Pashnev
 
     private void buttonCansel_Click(object sender, EventArgs e)
     {
-      Employee.Clear();
-      User.Clear();
+      employee.Clear();
+      user.Clear();
       Close();
     }
   }

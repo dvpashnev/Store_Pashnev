@@ -32,6 +32,7 @@
       this.label2 = new System.Windows.Forms.Label();
       this.label3 = new System.Windows.Forms.Label();
       this.groupBox6 = new System.Windows.Forms.GroupBox();
+      this.checkBoxFirmName = new System.Windows.Forms.CheckBox();
       this.checkBoxDiscount = new System.Windows.Forms.CheckBox();
       this.checkBoxSO = new System.Windows.Forms.CheckBox();
       this.checkBoxAdress = new System.Windows.Forms.CheckBox();
@@ -52,7 +53,6 @@
       this.groupBox1 = new System.Windows.Forms.GroupBox();
       this.checkBoxManagement = new System.Windows.Forms.CheckBox();
       this.checkBoxReports = new System.Windows.Forms.CheckBox();
-      this.checkBoxClaims = new System.Windows.Forms.CheckBox();
       this.checkBoxClients = new System.Windows.Forms.CheckBox();
       this.groupBox6.SuspendLayout();
       this.groupBox1.SuspendLayout();
@@ -87,6 +87,7 @@
       // 
       // groupBox6
       // 
+      this.groupBox6.Controls.Add(this.checkBoxFirmName);
       this.groupBox6.Controls.Add(this.checkBoxDiscount);
       this.groupBox6.Controls.Add(this.checkBoxSO);
       this.groupBox6.Controls.Add(this.checkBoxAdress);
@@ -104,6 +105,16 @@
       this.groupBox6.TabIndex = 8;
       this.groupBox6.TabStop = false;
       this.groupBox6.Text = "Доступ к полям клиента";
+      // 
+      // checkBoxFirmName
+      // 
+      this.checkBoxFirmName.AutoSize = true;
+      this.checkBoxFirmName.Location = new System.Drawing.Point(250, 149);
+      this.checkBoxFirmName.Name = "checkBoxFirmName";
+      this.checkBoxFirmName.Size = new System.Drawing.Size(101, 17);
+      this.checkBoxFirmName.TabIndex = 11;
+      this.checkBoxFirmName.Text = "Имя компании";
+      this.checkBoxFirmName.UseVisualStyleBackColor = true;
       // 
       // checkBoxDiscount
       // 
@@ -273,7 +284,6 @@
       // 
       this.groupBox1.Controls.Add(this.checkBoxManagement);
       this.groupBox1.Controls.Add(this.checkBoxReports);
-      this.groupBox1.Controls.Add(this.checkBoxClaims);
       this.groupBox1.Controls.Add(this.checkBoxClients);
       this.groupBox1.Controls.Add(this.checkBoxOrder);
       this.groupBox1.Controls.Add(this.checkBoxProducts);
@@ -287,7 +297,7 @@
       // checkBoxManagement
       // 
       this.checkBoxManagement.AutoSize = true;
-      this.checkBoxManagement.Location = new System.Drawing.Point(250, 47);
+      this.checkBoxManagement.Location = new System.Drawing.Point(138, 48);
       this.checkBoxManagement.Name = "checkBoxManagement";
       this.checkBoxManagement.Size = new System.Drawing.Size(88, 17);
       this.checkBoxManagement.TabIndex = 8;
@@ -297,22 +307,12 @@
       // checkBoxReports
       // 
       this.checkBoxReports.AutoSize = true;
-      this.checkBoxReports.Location = new System.Drawing.Point(138, 48);
+      this.checkBoxReports.Location = new System.Drawing.Point(32, 48);
       this.checkBoxReports.Name = "checkBoxReports";
       this.checkBoxReports.Size = new System.Drawing.Size(63, 17);
       this.checkBoxReports.TabIndex = 7;
       this.checkBoxReports.Text = "Отчёты";
       this.checkBoxReports.UseVisualStyleBackColor = true;
-      // 
-      // checkBoxClaims
-      // 
-      this.checkBoxClaims.AutoSize = true;
-      this.checkBoxClaims.Location = new System.Drawing.Point(32, 48);
-      this.checkBoxClaims.Name = "checkBoxClaims";
-      this.checkBoxClaims.Size = new System.Drawing.Size(69, 17);
-      this.checkBoxClaims.TabIndex = 6;
-      this.checkBoxClaims.Text = "Жалобы";
-      this.checkBoxClaims.UseVisualStyleBackColor = true;
       // 
       // checkBoxClients
       // 
@@ -377,7 +377,7 @@
     private System.Windows.Forms.GroupBox groupBox1;
     private System.Windows.Forms.CheckBox checkBoxManagement;
     private System.Windows.Forms.CheckBox checkBoxReports;
-    private System.Windows.Forms.CheckBox checkBoxClaims;
     private System.Windows.Forms.CheckBox checkBoxClients;
+    private System.Windows.Forms.CheckBox checkBoxFirmName;
   }
 }

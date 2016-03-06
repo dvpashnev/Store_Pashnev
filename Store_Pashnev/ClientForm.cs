@@ -7,39 +7,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Store_WSL;
 
 namespace Store_Pashnev
 {
   public partial class ClientForm : Form
   {
+    public Client client = new Client();
+
     public ClientForm()
     {
       InitializeComponent();
     }
 
+    public ClientForm(Client clnt)
+    {
+      InitializeComponent();
+      client = clnt;
+    }
+
     private void ClientForm_Load(object sender, EventArgs e)
     {
-      textBoxID.Text = Client.Id.ToString();
+      textBoxID.Text = client.Id.ToString();
       textBoxID.ReadOnly = true;
-
-      textBoxLN.Text = Client.LastName;
-      textBoxFN.Text = Client.FirstName;
-      textBoxMN.Text = Client.MiddleName;
-      textBoxSum.Text = Client.SumOrders.ToString();
-      textBoxDiscount.Text = Client.Discount.ToString();
-      textBoxPhone1.Text = Client.Phone1;
-      textBoxPhone2.Text = Client.Phone2;
-      textBoxPhone3.Text = Client.Phone3;
-      textBoxAdress.Text = Client.Adress;
-      radioButtonMale.Checked = (Client.Sex == "мужской");
-      radioButtonFemale.Checked = (Client.Sex == "женский");
-      dateTimePickerBD.Value = Client.BirthDay;
-
+      if (client.LastName != null)
+      {
+        textBoxLN.Text = client.LastName;
+        textBoxFN.Text = client.FirstName;
+        textBoxMN.Text = client.MiddleName;
+        textBoxSum.Text = client.SumOrders.ToString();
+        textBoxDiscount.Text = client.Discount.ToString();
+        textBoxPhone1.Text = client.Phone1;
+        textBoxPhone2.Text = client.Phone2;
+        textBoxPhone3.Text = client.Phone3;
+        textBoxAdress.Text = client.Adress;
+        radioButtonMale.Checked = (client.Sex == "мужской");
+        radioButtonFemale.Checked = (client.Sex == "женский");
+        dateTimePickerBD.Value = client.BirthDay;
+        textBoxFirmName.Text = client.FirmName;
+      }
     }
 
     private void buttonCansel_Click(object sender, EventArgs e)
     {
-      Client.Clear();
+      client.Clear();
       Close();
     }
 
@@ -47,7 +58,7 @@ namespace Store_Pashnev
     {
       string sex = radioButtonMale.Checked ? "мужской" : "женский";
 
-      Client.SetValues(
+      client.SetValues(
         Convert.ToInt32(textBoxID.Text),
         textBoxLN.Text,
         textBoxFN.Text,
@@ -59,7 +70,8 @@ namespace Store_Pashnev
         textBoxPhone3.Text,
         textBoxAdress.Text,
         Convert.ToDouble(textBoxSum.Text),
-        Convert.ToInt32(textBoxDiscount.Text)
+        Convert.ToInt32(textBoxDiscount.Text),
+        textBoxFirmName.Text
       );
       Close();
     }

@@ -42,18 +42,24 @@
       this.button2 = new System.Windows.Forms.Button();
       this.comboBoxDep = new System.Windows.Forms.ComboBox();
       this.comboBoxProducer = new System.Windows.Forms.ComboBox();
+      this.label1 = new System.Windows.Forms.Label();
+      this.label2 = new System.Windows.Forms.Label();
+      this.PurchasePriceNumericUpDown = new System.Windows.Forms.NumericUpDown();
+      this.MarkupNumericUpDown = new System.Windows.Forms.NumericUpDown();
+      ((System.ComponentModel.ISupportInitialize)(this.PurchasePriceNumericUpDown)).BeginInit();
+      ((System.ComponentModel.ISupportInitialize)(this.MarkupNumericUpDown)).BeginInit();
       this.SuspendLayout();
       // 
       // textBoxQuantity
       // 
-      this.textBoxQuantity.Location = new System.Drawing.Point(102, 208);
+      this.textBoxQuantity.Location = new System.Drawing.Point(102, 287);
       this.textBoxQuantity.Name = "textBoxQuantity";
       this.textBoxQuantity.Size = new System.Drawing.Size(124, 20);
       this.textBoxQuantity.TabIndex = 23;
       // 
       // textBoxPrice
       // 
-      this.textBoxPrice.Location = new System.Drawing.Point(102, 101);
+      this.textBoxPrice.Location = new System.Drawing.Point(102, 180);
       this.textBoxPrice.Name = "textBoxPrice";
       this.textBoxPrice.Size = new System.Drawing.Size(124, 20);
       this.textBoxPrice.TabIndex = 20;
@@ -61,7 +67,7 @@
       // labelQuantity
       // 
       this.labelQuantity.AutoSize = true;
-      this.labelQuantity.Location = new System.Drawing.Point(13, 202);
+      this.labelQuantity.Location = new System.Drawing.Point(13, 281);
       this.labelQuantity.Name = "labelQuantity";
       this.labelQuantity.Size = new System.Drawing.Size(66, 26);
       this.labelQuantity.TabIndex = 19;
@@ -70,7 +76,7 @@
       // labelProducer
       // 
       this.labelProducer.AutoSize = true;
-      this.labelProducer.Location = new System.Drawing.Point(13, 170);
+      this.labelProducer.Location = new System.Drawing.Point(13, 249);
       this.labelProducer.Name = "labelProducer";
       this.labelProducer.Size = new System.Drawing.Size(65, 13);
       this.labelProducer.TabIndex = 18;
@@ -79,7 +85,7 @@
       // labelDepartment
       // 
       this.labelDepartment.AutoSize = true;
-      this.labelDepartment.Location = new System.Drawing.Point(13, 137);
+      this.labelDepartment.Location = new System.Drawing.Point(13, 216);
       this.labelDepartment.Name = "labelDepartment";
       this.labelDepartment.Size = new System.Drawing.Size(38, 13);
       this.labelDepartment.TabIndex = 17;
@@ -88,7 +94,7 @@
       // labelPrice
       // 
       this.labelPrice.AutoSize = true;
-      this.labelPrice.Location = new System.Drawing.Point(13, 104);
+      this.labelPrice.Location = new System.Drawing.Point(13, 183);
       this.labelPrice.Name = "labelPrice";
       this.labelPrice.Size = new System.Drawing.Size(33, 13);
       this.labelPrice.TabIndex = 16;
@@ -128,7 +134,7 @@
       // 
       // button1
       // 
-      this.button1.Location = new System.Drawing.Point(22, 253);
+      this.button1.Location = new System.Drawing.Point(22, 332);
       this.button1.Name = "button1";
       this.button1.Size = new System.Drawing.Size(75, 23);
       this.button1.TabIndex = 24;
@@ -138,7 +144,7 @@
       // 
       // button2
       // 
-      this.button2.Location = new System.Drawing.Point(119, 253);
+      this.button2.Location = new System.Drawing.Point(119, 332);
       this.button2.Name = "button2";
       this.button2.Size = new System.Drawing.Size(75, 23);
       this.button2.TabIndex = 25;
@@ -149,7 +155,7 @@
       // comboBoxDep
       // 
       this.comboBoxDep.FormattingEnabled = true;
-      this.comboBoxDep.Location = new System.Drawing.Point(102, 136);
+      this.comboBoxDep.Location = new System.Drawing.Point(102, 215);
       this.comboBoxDep.Name = "comboBoxDep";
       this.comboBoxDep.Size = new System.Drawing.Size(124, 21);
       this.comboBoxDep.TabIndex = 26;
@@ -157,17 +163,76 @@
       // comboBoxProducer
       // 
       this.comboBoxProducer.FormattingEnabled = true;
-      this.comboBoxProducer.Location = new System.Drawing.Point(102, 167);
+      this.comboBoxProducer.Location = new System.Drawing.Point(102, 249);
       this.comboBoxProducer.Name = "comboBoxProducer";
       this.comboBoxProducer.Size = new System.Drawing.Size(121, 21);
       this.comboBoxProducer.TabIndex = 27;
+      // 
+      // label1
+      // 
+      this.label1.AutoSize = true;
+      this.label1.Location = new System.Drawing.Point(13, 108);
+      this.label1.Name = "label1";
+      this.label1.Size = new System.Drawing.Size(77, 13);
+      this.label1.TabIndex = 28;
+      this.label1.Text = "Цена закупки";
+      // 
+      // label2
+      // 
+      this.label2.AutoSize = true;
+      this.label2.Location = new System.Drawing.Point(13, 145);
+      this.label2.Name = "label2";
+      this.label2.Size = new System.Drawing.Size(68, 13);
+      this.label2.TabIndex = 30;
+      this.label2.Text = "Наценка (%)";
+      // 
+      // PurchasePriceNumericUpDown
+      // 
+      this.PurchasePriceNumericUpDown.DecimalPlaces = 2;
+      this.PurchasePriceNumericUpDown.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+      this.PurchasePriceNumericUpDown.Location = new System.Drawing.Point(102, 108);
+      this.PurchasePriceNumericUpDown.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+      this.PurchasePriceNumericUpDown.Name = "PurchasePriceNumericUpDown";
+      this.PurchasePriceNumericUpDown.Size = new System.Drawing.Size(124, 20);
+      this.PurchasePriceNumericUpDown.TabIndex = 31;
+      this.PurchasePriceNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+      this.PurchasePriceNumericUpDown.ValueChanged += new System.EventHandler(this.PurshasePriceNumericUpDown_ValueChanged);
+      // 
+      // MarkupNumericUpDown
+      // 
+      this.MarkupNumericUpDown.Location = new System.Drawing.Point(103, 145);
+      this.MarkupNumericUpDown.Name = "MarkupNumericUpDown";
+      this.MarkupNumericUpDown.Size = new System.Drawing.Size(123, 20);
+      this.MarkupNumericUpDown.TabIndex = 32;
+      this.MarkupNumericUpDown.Value = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
+      this.MarkupNumericUpDown.ValueChanged += new System.EventHandler(this.MarkupNumericUpDown_ValueChanged);
       // 
       // ProductForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(242, 293);
+      this.ClientSize = new System.Drawing.Size(242, 375);
       this.ControlBox = false;
+      this.Controls.Add(this.MarkupNumericUpDown);
+      this.Controls.Add(this.PurchasePriceNumericUpDown);
+      this.Controls.Add(this.label2);
+      this.Controls.Add(this.label1);
       this.Controls.Add(this.comboBoxProducer);
       this.Controls.Add(this.comboBoxDep);
       this.Controls.Add(this.button2);
@@ -188,6 +253,8 @@
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "Товар";
       this.Load += new System.EventHandler(this.ProductForm_Load);
+      ((System.ComponentModel.ISupportInitialize)(this.PurchasePriceNumericUpDown)).EndInit();
+      ((System.ComponentModel.ISupportInitialize)(this.MarkupNumericUpDown)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
 
@@ -209,5 +276,9 @@
     private System.Windows.Forms.Button button2;
     private System.Windows.Forms.ComboBox comboBoxDep;
     private System.Windows.Forms.ComboBox comboBoxProducer;
+    private System.Windows.Forms.Label label1;
+    private System.Windows.Forms.Label label2;
+    private System.Windows.Forms.NumericUpDown PurchasePriceNumericUpDown;
+    private System.Windows.Forms.NumericUpDown MarkupNumericUpDown;
   }
 }

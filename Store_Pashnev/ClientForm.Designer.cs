@@ -60,6 +60,8 @@
       this.buttonBindToOrder = new System.Windows.Forms.Button();
       this.buttonCreateOrder = new System.Windows.Forms.Button();
       this.buttonCansel = new System.Windows.Forms.Button();
+      this.textBoxFirmName = new System.Windows.Forms.TextBox();
+      this.label1 = new System.Windows.Forms.Label();
       this.groupBox3.SuspendLayout();
       this.groupBox2.SuspendLayout();
       this.groupBox1.SuspendLayout();
@@ -149,6 +151,8 @@
       // 
       // groupBox2
       // 
+      this.groupBox2.Controls.Add(this.textBoxFirmName);
+      this.groupBox2.Controls.Add(this.label1);
       this.groupBox2.Controls.Add(this.textBoxDiscount);
       this.groupBox2.Controls.Add(this.textBoxSum);
       this.groupBox2.Controls.Add(this.textBoxMN);
@@ -163,24 +167,26 @@
       this.groupBox2.Controls.Add(this.label11);
       this.groupBox2.Location = new System.Drawing.Point(21, 15);
       this.groupBox2.Name = "groupBox2";
-      this.groupBox2.Size = new System.Drawing.Size(313, 191);
+      this.groupBox2.Size = new System.Drawing.Size(313, 225);
       this.groupBox2.TabIndex = 9;
       this.groupBox2.TabStop = false;
       this.groupBox2.Text = "Основная информация";
       // 
       // textBoxDiscount
       // 
-      this.textBoxDiscount.Location = new System.Drawing.Point(96, 152);
+      this.textBoxDiscount.Location = new System.Drawing.Point(96, 193);
       this.textBoxDiscount.Name = "textBoxDiscount";
       this.textBoxDiscount.Size = new System.Drawing.Size(186, 20);
       this.textBoxDiscount.TabIndex = 11;
+      this.textBoxDiscount.Text = "0";
       // 
       // textBoxSum
       // 
-      this.textBoxSum.Location = new System.Drawing.Point(96, 124);
+      this.textBoxSum.Location = new System.Drawing.Point(96, 165);
       this.textBoxSum.Name = "textBoxSum";
       this.textBoxSum.Size = new System.Drawing.Size(186, 20);
       this.textBoxSum.TabIndex = 10;
+      this.textBoxSum.Text = "0";
       // 
       // textBoxMN
       // 
@@ -213,7 +219,7 @@
       // label22
       // 
       this.label22.AutoSize = true;
-      this.label22.Location = new System.Drawing.Point(6, 127);
+      this.label22.Location = new System.Drawing.Point(6, 168);
       this.label22.Name = "label22";
       this.label22.Size = new System.Drawing.Size(86, 13);
       this.label22.TabIndex = 5;
@@ -222,7 +228,7 @@
       // label15
       // 
       this.label15.AutoSize = true;
-      this.label15.Location = new System.Drawing.Point(6, 155);
+      this.label15.Location = new System.Drawing.Point(6, 196);
       this.label15.Name = "label15";
       this.label15.Size = new System.Drawing.Size(44, 13);
       this.label15.TabIndex = 4;
@@ -271,7 +277,7 @@
       this.groupBox1.Controls.Add(this.radioButtonMale);
       this.groupBox1.Controls.Add(this.label17);
       this.groupBox1.Controls.Add(this.label16);
-      this.groupBox1.Location = new System.Drawing.Point(21, 225);
+      this.groupBox1.Location = new System.Drawing.Point(21, 246);
       this.groupBox1.Name = "groupBox1";
       this.groupBox1.Size = new System.Drawing.Size(313, 87);
       this.groupBox1.TabIndex = 8;
@@ -363,6 +369,22 @@
       this.buttonCansel.UseVisualStyleBackColor = true;
       this.buttonCansel.Click += new System.EventHandler(this.buttonCansel_Click);
       // 
+      // textBoxFirmName
+      // 
+      this.textBoxFirmName.Location = new System.Drawing.Point(96, 122);
+      this.textBoxFirmName.Name = "textBoxFirmName";
+      this.textBoxFirmName.Size = new System.Drawing.Size(186, 20);
+      this.textBoxFirmName.TabIndex = 13;
+      // 
+      // label1
+      // 
+      this.label1.AutoSize = true;
+      this.label1.Location = new System.Drawing.Point(6, 125);
+      this.label1.Name = "label1";
+      this.label1.Size = new System.Drawing.Size(44, 13);
+      this.label1.TabIndex = 12;
+      this.label1.Text = "Фирма";
+      // 
       // ClientForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -425,5 +447,7 @@
     private System.Windows.Forms.Button buttonBindToOrder;
     private System.Windows.Forms.Button buttonCreateOrder;
     private System.Windows.Forms.Button buttonCansel;
+    private System.Windows.Forms.TextBox textBoxFirmName;
+    private System.Windows.Forms.Label label1;
   }
 }

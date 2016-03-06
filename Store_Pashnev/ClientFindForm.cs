@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Store_WSL;
 
 namespace Store_Pashnev
 {
@@ -14,6 +15,8 @@ namespace Store_Pashnev
   {
     private DataTable _clients;
     Dictionary<string, bool> _rights;
+
+    public Client clnt = new Client();
 
     public ClientFindForm(DataTable clients, Dictionary<string, bool> rights)
     {
@@ -184,18 +187,26 @@ namespace Store_Pashnev
 
     private void buttonCansel_Click(object sender, EventArgs e)
     {
+      clnt.Clear();
       Close();
     }
 
-    private void button1_Click(object sender, EventArgs e)
+    private void ToOrderBtn_Click(object sender, EventArgs e)
     {
-      Client.SetId(Convert.ToInt32(dgwClients.Rows[dgwClients.CurrentCell.RowIndex].Cells["Id"].Value));
-      Close();
-    }
-
-    private void button2_Click(object sender, EventArgs e)
-    {
-      Client.SetId(Convert.ToInt32(dgwClients.Rows[dgwClients.CurrentCell.RowIndex].Cells["Id"].Value));
+      clnt.SetValues(Convert.ToInt32(dgwClients.Rows[dgwClients.CurrentCell.RowIndex].Cells["Id"].Value),
+        dgwClients.Rows[dgwClients.CurrentCell.RowIndex].Cells["LastName"].Value.ToString(),
+        dgwClients.Rows[dgwClients.CurrentCell.RowIndex].Cells["FirstName"].Value.ToString(),
+        dgwClients.Rows[dgwClients.CurrentCell.RowIndex].Cells["MiddleName"].Value.ToString(),
+        dgwClients.Rows[dgwClients.CurrentCell.RowIndex].Cells["Sex"].Value.ToString(),
+        Convert.ToDateTime(dgwClients.Rows[dgwClients.CurrentCell.RowIndex].Cells["BirthDay"].Value),
+        dgwClients.Rows[dgwClients.CurrentCell.RowIndex].Cells["Phone1"].Value.ToString(),
+        dgwClients.Rows[dgwClients.CurrentCell.RowIndex].Cells["Phone2"].Value.ToString(),
+        dgwClients.Rows[dgwClients.CurrentCell.RowIndex].Cells["Phone3"].Value.ToString(),
+        dgwClients.Rows[dgwClients.CurrentCell.RowIndex].Cells["Adress"].Value.ToString(),
+        Convert.ToDouble(dgwClients.Rows[dgwClients.CurrentCell.RowIndex].Cells["SumOrders"].Value),
+        Convert.ToInt32(dgwClients.Rows[dgwClients.CurrentCell.RowIndex].Cells["Discount"].Value),
+        dgwClients.Rows[dgwClients.CurrentCell.RowIndex].Cells["FirmName"].Value.ToString()
+        );
       Close();
     }
 

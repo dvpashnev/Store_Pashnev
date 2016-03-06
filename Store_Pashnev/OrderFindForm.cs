@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Store_WSL;
 
 namespace Store_Pashnev
 {
@@ -17,6 +14,8 @@ namespace Store_Pashnev
     private DataTable _productsInOrder;
 
     private BindingSource _bs;
+
+    public Order order = new Order();
 
     public OrderFindForm(DataTable orders, DataTable employees, DataTable productsInOrder)
     {
@@ -29,8 +28,7 @@ namespace Store_Pashnev
     private void OrderFindForm_Load(object sender, EventArgs e)
     {
       _bs = new BindingSource { DataSource = _orders };
-      dataGridViewOrders.DataSource = _orders;
-
+      dataGridViewOrders.DataSource = _bs;
     }
 
     private void button1_Click(object sender, EventArgs e)
@@ -120,25 +118,27 @@ namespace Store_Pashnev
 
     private void btnTakeOrder_Click(object sender, EventArgs e)
     {
-      var pairs = (from row in _productsInOrder.AsEnumerable()
+      var pio = (from row in _productsInOrder.AsEnumerable()
         where
           row.Field<int>("OrderId") ==
           Convert.ToInt32(dataGridViewOrders.Rows[dataGridViewOrders.CurrentCell.RowIndex].Cells["Id"].Value)
-        select new
+        select new ProductInOrder
         {
-          f = (int) row["ProductId"],
-          s = (int) row["Quantity"]
+          Id = Convert.ToInt32(row["Id"]),
+          OrderId = Convert.ToInt32(row["OrderId"]),
+          ProductId = Convert.ToInt32(row["ProductId"]),
+          Quantity = Convert.ToInt32(row["Quantity"]),
+          FinalPrice = Convert.ToDouble(row["FinalPrice"]),
+          Sum = Convert.ToDouble(row["Sum"])
         });
 
-      Dictionary<int, int> products = new Dictionary<int, int>();
-      foreach (var row in pairs)
+      Dictionary<int, ProductInOrder> products = new Dictionary<int, ProductInOrder>();
+      foreach (var row in pio)
       {
-        if (!products.ContainsKey(row.f))
-        {
-          products.Add(row.f, row.s);
-        }
+        products.Add(row.ProductId, row);
       }
-      OrderCurrent.SetValues(
+
+      order.SetValues(
         Convert.ToInt32(dataGridViewOrders.Rows[dataGridViewOrders.CurrentCell.RowIndex].Cells["Id"].Value),
         dataGridViewOrders.Rows[dataGridViewOrders.CurrentCell.RowIndex].Cells["Category"].Value.ToString(),
         Convert.ToInt32(dataGridViewOrders.Rows[dataGridViewOrders.CurrentCell.RowIndex].Cells["EmployeeId"].Value),
@@ -150,6 +150,12 @@ namespace Store_Pashnev
         products
         );
 
+      Close();
+    }
+
+    private void btnExit_Click(object sender, EventArgs e)
+    {
+      order.Clear();
       Close();
     }
   }
